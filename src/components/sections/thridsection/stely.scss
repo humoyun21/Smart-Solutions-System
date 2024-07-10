@@ -1,3 +1,81 @@
 #smart{
     background-color: black;
+   
+    
+    
+    
+}
+.speak{
+    justify-content: space-between;
+    display: flex;
+    padding-top: 80px;
+    &-form{
+        h2{
+            color: red;
+            width: 300px;
+        }
+        p{
+            color: rgb(224, 227, 230);
+            font-size: 12px;
+            width: 400px;
+            padding-top: 20px;
+            padding-left: 20px;
+        }
+        .speak-forms{
+            gap: 40px;
+            
+            display: flex;
+            input{
+                width: 200px;
+            }
+            p{
+                padding-bottom: 5px;
+                padding-left: 0px;
+                width: 100px;
+            }
+        }
+        .speak-forms-company{
+            p{
+                padding-left: 0px;
+                padding-bottom: 2px;
+            }
+           input{
+            width: 440px;
+           }
+           select{
+            width: 440px;
+           }
+           textarea{
+            width: 440px;
+            height: 100px;
+           }
+          
+        }
+        .speak-forms-btn{
+            padding-top: 25px;
+            justify-content: center;
+            display: flex;
+            button{
+               
+                background-color: red;
+                color: white;
+                padding-top: 10px;
+                padding-bottom: 10px;
+                border: white 2px;
+                padding-left: 25px;
+                padding-right: 25px;
+                border-radius: 5px;
+
+            }
+               
+        }
+    }
+
+    &-about{
+        h2{
+            padding-top: 40px;
+            width: 450px;
+            color: white;
+        }
+    }
 }
