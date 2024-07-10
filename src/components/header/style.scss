@@ -1,0 +1,23 @@
+.header-wrap{
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+    .header-ul{
+        display: flex;
+        gap: 25px;
+        
+    }
+    .header-link{
+        display: flex;
+        align-items: center;
+        justify-content:space-between;
+        gap: 20px;
+    }
+}
+.logo{
+    width: 300px;
+}
+.header-btn{
+    background-color: red !important;
+    color: white;
+}
