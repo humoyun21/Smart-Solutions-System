@@ -1,74 +1,57 @@
-.second{
-    display: flex;
-    justify-content: space-between;
-    &-all{
-        display: flex;
-        flex-direction: column ;
-        justify-content: center;
-        width: 300px;
-        align-items: center;
+.main-section {
+    padding: 80px 0;
+    background-color: #EEF4FA;
+}
 
-        img{
-            justify-content: center;
-            width: 100px;
-     
+.second {
+    margin-bottom: 40px;
+
+    .second-all {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+}
+
+.about {
+    margin-bottom: 40px;
+
+    .about-us {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        h2 {
+            font-size: 32px;
+            margin-bottom: 16px;
         }
-        h2{
-            justify-content: center;
-            font-size: 20px;
-            color: red;
-            font-weight: bold;
-            padding-top: 20px;
-           
+
+        h3 {
+            font-size: 24px;
+            margin-bottom: 16px;
         }
-        h3{
-        font-size: 14px;
-            padding-top: 20px;
-            width: 300px;
-            text-align: center;
+
+        h4 {
+            font-size: 16px;
+            line-height: 1.6;
+            margin-bottom: 24px;
+        }
+    }
+
+    .about-img {
+        img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
         }
     }
 }
-.about{
-    padding-top: 50px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    &-us{
-        h2{
-            padding-top: 10px;
-            font-size: 15px;
-        }
-        h3{
-           padding-top: 20px;
-            font-size: 23px;
-            width: 300px;
-        }
-        h4{
-            padding-top: 40px;
-            width: 600px;
-            font-size: 17px;
-        }
-        button{
-            margin-top: 20px;
-            background: none !important;
-            border: red 4px;
-            background-color: red !important;
-            color: white;
-        }
-    }
-    &-img{
-        padding-top: 50px;
-        width: 600px;
-    }
-}
-.photos{
-    padding-top: 100px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-bottom: 80px;
-    img{
-        width: 300px;
+
+.photos {
+    .photo {
+        width: 100%;
+        height: auto;
+        border-radius: 8px;
     }
 }
