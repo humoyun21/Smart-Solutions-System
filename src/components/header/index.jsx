@@ -8,8 +8,8 @@ const index = () => {
             <Container>
                 <nav className="header-wrap">
                     <div className="header-wrap-logo"> 
-                    <a href="#" className="logo"> <img src={logo} alt="img" /></a>
-                    <p>Smart Solutions System</p>
+                    <a href="#" className="logo"> <img src={logo} alt="img" />
+                    <p>Smart Solutions System</p></a>
                     </div>
                   
                     <div className="header-ul">
@@ -34,3 +34,4 @@ const index = () => {
 };
 
 export default index;
+

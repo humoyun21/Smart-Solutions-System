@@ -75,3 +75,16 @@
         }
     }
 }
+.header-btn {
+    display: none; /* Hide by default */
+}
+
+@media (max-width: 768px) {
+    .responsive-btn {
+        display: inline-block; /* Display on smaller screens */
+    }
+
+    .header-link {
+        display: none; /* Hide navigation links on smaller screens */
+    }
+}
