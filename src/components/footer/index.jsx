@@ -45,10 +45,12 @@ const Index = () => {
                     <Col xs={24} md={6} className="info-contact">
                         <h3>Let's chat!</h3>
                         <div className="social-icons">
+                             <InstagramOutlined />
+                             <YoutubeOutlined />
                             <FacebookOutlined />
                             <TwitterOutlined />
-                            <YoutubeOutlined />
-                            <InstagramOutlined />
+                           
+                            
                         </div>
                     </Col>
                 </Row>
