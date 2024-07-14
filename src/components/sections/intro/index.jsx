@@ -1,4 +1,5 @@
 import React from "react";
+<<<<<<< HEAD
 import { Box, Button } from "@mui/material";
 import Carousel from "react-material-ui-carousel";
 import { Paper, Typography } from "@mui/material";
@@ -28,20 +29,42 @@ const StyledPaper = styled(Paper)({
 const items = [
   {
     bgImage: MainSection1,
+=======
+import "./style.scss";
+import { Container } from "@containers";
+import { Carousel, Typography } from "antd";
+import Corusle1 from "../../../assets/images/corusel1.png";
+import Corusle2 from "../../../assets/images/corusel2.png";
+import Corusle3 from "../../../assets/images/corusel3.jpg";
+
+const { Title, Paragraph } = Typography;
+
+const items = [
+  {
+    bgImage: Corusle1,
+>>>>>>> 4937c51 (Video and news updated)
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam aliquet.",
     title: "Lorem ipsum dolor",
     buttonText: "More Read",
   },
   {
+<<<<<<< HEAD
     bgImage: MainSection2,
+=======
+    bgImage: Corusle2,
+>>>>>>> 4937c51 (Video and news updated)
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam aliquet.",
     title: "Lorem ipsum dolor",
     buttonText: "Sale Now",
   },
   {
+<<<<<<< HEAD
     bgImage: MainSection3,
+=======
+    bgImage: Corusle3,
+>>>>>>> 4937c51 (Video and news updated)
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam aliquet.",
     title: "Lorem ipsum dolor",
@@ -49,6 +72,7 @@ const items = [
   },
 ];
 
+<<<<<<< HEAD
 const imageData = [
   {
     image: About1,
@@ -441,3 +465,62 @@ function Home() {
 }
 
 export default Home;
+=======
+function Index() {
+  return (
+    <section id="intro" className="bg-[#1C1E53] pt-[92px] pb-[132px]">
+      <Container>
+        <Carousel autoplay>
+          {items.map((item, index) => (
+            <div
+              key={index}
+              className="carousel-item"
+              style={{
+                backgroundImage: `url(${item.bgImage})`,
+                backgroundPosition: "center",
+                backgroundSize: "cover",
+                height: 550,
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                textAlign: "center",
+                color: "#fff",
+              }}
+            >
+              <div className="carousel-content">
+                <Title
+                  level={1}
+                  style={{ color: "rgb(1, 154, 204)", marginBottom: 20 }}
+                >
+                  {item.title}
+                </Title>
+                <Paragraph style={{ color: "#1c1e53", marginBottom: 40 }}>
+                  {item.description}
+                </Paragraph>
+                <a
+                  href="/"
+                  className="carousel-button"
+                  style={{
+                    
+                    padding: "10px 30px",
+                    border: "2px solid rgb(1, 154, 204)",
+                    color: "#fff",
+                    borderRadius: "5px",
+                    fontSize: 20,
+                    fontWeight: "bold",
+                    textDecoration: "none",
+                  }}
+                >
+                  {item.buttonText}
+                </a>
+              </div>
+            </div>
+          ))}
+        </Carousel>
+      </Container>
+    </section>
+  );
+}
+
+export default Index;
+>>>>>>> 4937c51 (Video and news updated)
