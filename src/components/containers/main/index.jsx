@@ -3,7 +3,7 @@ import "./stule.scss";
 function index({children}) {
     return <main>
         {children}
-    </main>
+        </main>
 }
 
 export default index;

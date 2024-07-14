@@ -1,15 +1,18 @@
-.corusel-wrap{
+.corusel-wrap {
     margin-bottom: 100px;
-
-    h2{font-size: 30px;
-        color: rgb(34, 160, 218);
-    padding-top: 20px;
-    padding-bottom: 40px;
+  
+    h2 {
+      font-size: 30px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: rgb(34, 114, 218);
+      padding-top: 20px;
+      padding-bottom: 40px;
     }
-
-}
-
-.carousel-content {
+  }
+  
+  .carousel-content {
     position: relative;
     text-align: center;
   
@@ -40,16 +43,16 @@
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
-      background-color: rgba(0, 0, 0, 0.5);
-      color: white;
+      
+      color: rgb(86, 179, 251);
       border: none;
       border-radius: 50%;
       padding: 10px 20px;
       cursor: pointer;
       font-size: 16px;
-  
-      &:hover {
-        background-color: rgba(0, 0, 0, 0.7);
+      
+      :hover{
+       color: rgb(26, 88, 244);
       }
     }
   

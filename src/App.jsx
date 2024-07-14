@@ -3,6 +3,8 @@ import Footer from "@component/footer";
 import { Main } from "@containers";
 import { Intro, SecondSection, ThridSection, Fourth } from "@sections";
 
+
+
 const App = () => {
   return (
     <>

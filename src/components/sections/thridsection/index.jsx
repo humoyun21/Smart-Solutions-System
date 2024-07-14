@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Navigation, Pagination, Scrollbar, A11y } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { PlayCircleOutlined,  } from '@ant-design/icons';
+import { PlayCircleOutlined } from '@ant-design/icons';
 import Feature1 from "../../../assets/images/feature.jpg";
 import Feature2 from "../../../assets/images/featured1.jpg";
 import Feature3 from "../../../assets/images/featured2.jpg";
@@ -31,51 +31,55 @@ const ImageCarousel = () => {
 
   return (
     <Container>
-<div className='corusel-wrap'>
-
-
+      <div className='corusel-wrap'>
         <h2>Videolar:</h2>
-      <Swiper
-        modules={[Navigation, Pagination, Scrollbar, A11y]}
-        spaceBetween={30}
-        slidesPerView={3}
-        navigation
-        pagination={{ clickable: true }}
-        scrollbar={{ draggable: true }}
-        onSwiper={(swiper) => console.log(swiper)}
-        onSlideChange={() => console.log('slide change')}
-      >
-        <SwiperSlide>
-          <div className="carousel-content">
-            <img src={Feature1} alt="Feature 1" className="carousel-image" />
-            <button className="play-button" onClick={() => handleVideoClick(document.getElementById('video1'))}><PlayCircleOutlined /></button>
-            <video id="video1" className="carousel-video" onClick={handleVideoClick}>
-              <source src="path/to/your/video1.mp4" type="video/mp4" />
-              Your browser does not support the video tag.
-            </video>
-          </div>
-        </SwiperSlide>
-        <SwiperSlide>
-          <div className="carousel-content">
-            <img src={Feature2} alt="Feature 2" className="carousel-image" />
-            <button className="play-button" onClick={() => handleVideoClick(document.getElementById('video2'))}><PlayCircleOutlined /></button>
-            <video id="video2" className="carousel-video" onClick={handleVideoClick}>
-              <source src="path/to/your/video2.mp4" type="video/mp4" />
-              Your browser does not support the video tag.
-            </video>
-          </div>
-        </SwiperSlide>
-        <SwiperSlide>
-          <div className="carousel-content">
-            <img src={Feature3} alt="Feature 3" className="carousel-image" />
-            <button className="play-button" onClick={() => handleVideoClick(document.getElementById('video3'))}><PlayCircleOutlined /></button>
-            <video id="video3" className="carousel-video" onClick={handleVideoClick}>
-              <source src="path/to/your/video3.mp4" type="video/mp4" />
-              Your browser does not support the video tag.
-            </video>
-          </div>
-        </SwiperSlide>
-      </Swiper>
+        <Swiper
+          modules={[Navigation, Pagination, Scrollbar, A11y]}
+          spaceBetween={30}
+          slidesPerView={3}
+          navigation
+          pagination={{ clickable: true }}
+          scrollbar={{ draggable: true }}
+          onSwiper={(swiper) => console.log(swiper)}
+          onSlideChange={() => console.log('slide change')}
+        >
+          <SwiperSlide>
+            <div className="carousel-content">
+              <img src={Feature1} alt="Feature 1" className="carousel-image" />
+              <button className="play-button" onClick={() => handleVideoClick(document.getElementById('video1'))}>
+                <PlayCircleOutlined style={{ fontSize: '48px' }} />
+              </button>
+              <video id="video1" className="carousel-video" onClick={handleVideoClick}>
+                <source src="path/to/your/video1.mp4" type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
+            </div>
+          </SwiperSlide>
+          <SwiperSlide>
+            <div className="carousel-content">
+              <img src={Feature2} alt="Feature 2" className="carousel-image" />
+              <button className="play-button" onClick={() => handleVideoClick(document.getElementById('video2'))}>
+                <PlayCircleOutlined style={{ fontSize: '48px' }} />
+              </button>
+              <video id="video2" className="carousel-video" onClick={handleVideoClick}>
+                <source src="path/to/your/video2.mp4" type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
+            </div>
+          </SwiperSlide>
+          <SwiperSlide>
+            <div className="carousel-content">
+              <img src={Feature3} alt="Feature 3" className="carousel-image" />
+              <button className="play-button" onClick={() => handleVideoClick(document.getElementById('video3'))}>
+                <PlayCircleOutlined style={{ fontSize: '48px' }} />
+              </button>
+              <video id="video3" className="carousel-video" onClick={handleVideoClick}>
+                <source src="path/to/your/video3.mp4" type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
+            </div>
+          </SwiperSlide>
+        </Swiper>
       </div>
     </Container>
   );
