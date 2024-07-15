@@ -1,11 +1,11 @@
-import React , { useState } from "react";
 
+import React, { useRef } from 'react';
 import "./style.scss";
 import { Container } from "@containers";
 import { Carousel, Typography ,Row, Col, Button, Card } from "antd";
-// import { Navigation, Pagination, Scrollbar, A11y } from 'swiper/modules';
+
 import { Swiper, SwiperSlide } from 'swiper/react';
-// import { PlayCircleOutlined } from '@ant-design/icons';
+
 
 // Import Swiper styles
 import 'swiper/css';
@@ -13,18 +13,15 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
 import 'swiper/css/effect-coverflow';
-import { EffectCoverflow, Pagination } from 'swiper/modules';
+
+import { EffectCoverflow, Navigation } from 'swiper/modules';
+
 
 
 //  Images
 import Corusle1 from "../../assets/images/corusel1.png";
 import Corusle2 from "../../assets/images/corusel2.png";
 import Corusle3 from "../../assets/images/corusel3.jpg";
-import Icon1 from "../../assets/images/icon1.svg";
-import Icon2 from "../../assets/images/icon2.svg";
-import Icon3 from "../../assets/images/icon3.svg";
-import Icon4 from "../../assets/images/icon4.svg";
-import Woman from "../../assets/images/woman.jpg";
 import Feature1 from "../../assets/images/featured1.jpg";
 import Feature2 from "../../assets/images/featured2.jpg";
 import Feature3 from "../../assets/images/featured3.jpg";
@@ -116,18 +113,28 @@ const newsData = [
 
 //swiper
 
-  const handleVideoClick = (event) => {
-    const video = event.currentTarget;
-    if (video.paused) {
-      video.play();
-      setIsVideoPlaying(true);
-    } else {
-      video.pause();
-      setIsVideoPlaying(false);
-    }
-  };
 
 function Index() {
+  const iframeRefs = useRef([]);
+
+  const handleIframeClick = (index) => {
+    iframeRefs.current.forEach((iframe, idx) => {
+      if (index !== idx && iframe) {
+        iframe.contentWindow.postMessage('{"event":"command","func":"pauseVideo","args":""}', '*');
+      }
+    });
+  };
+
+  const videos = [
+    { id: 'M7lc1UVf-VE', name: 'Mike', title: 'Fashion Director' },
+    { id: 'sBws8MSXN7A', name: 'Samite', title: 'Designer' },
+    { id: 'ScMzIvxBSi4', name: 'Kaity', title: 'Fashion Director' },
+    { id: 'K4TOrB7at0Y', name: 'Oakes', title: 'Photographer' },
+    { id: 'aqz-KE-bpKQ', name: 'Lauren', title: 'Model' },
+    { id: '9bZkp7q19f0', name: 'Ryan', title: 'Stylist' },
+  ];
+
+
     const truncateDescription = (description, length) => {
         return description.length > length ? description.substring(0, length) + "..." : description;
       };
@@ -186,51 +193,7 @@ function Index() {
       </Container>
     </section>
 
-    <section id="main-section" className="main-section">
-            <Container>
-                <Row gutter={[16, 16]} className="second">
-                    <Col xs={24} sm={12} md={6} className="second-all">
-                        <Card hoverable cover={<img alt="Icon1" src={Icon1} />}>
-                            <Meta title="ALL PRODUCTS" description="Discover our advantage. Offering the widest range of monitoring solutions in the industry." />
-                        </Card>
-                    </Col>
-                    <Col xs={24} sm={12} md={6} className="second-all">
-                        <Card hoverable cover={<img alt="Icon2" src={Icon2} />}>
-                            <Meta title="DOWNLOAD CENTER" description="Explore our download center. Find everything from product brochures to our software files." />
-                        </Card>
-                    </Col>
-                    <Col xs={24} sm={12} md={6} className="second-all">
-                        <Card hoverable cover={<img alt="Icon3" src={Icon3} />}>
-                            <Meta title="SUPPORT" description="Learn from some of the top technical minds in the industry and get the support you need." />
-                        </Card>
-                    </Col>
-                    <Col xs={24} sm={12} md={6} className="second-all">
-                        <Card hoverable cover={<img alt="Icon4" src={Icon4} />}>
-                            <Meta title="CONTACT US" description="We want to hear from you. We love learning about your projects and creating new partnerships." />
-                        </Card>
-                    </Col>
-                </Row>
-
-                <Row gutter={[16, 16]} className="about">
-                    <Col xs={24} md={12} className="about-us">
-                        <h2>ABOUT US</h2>
-                        <h3>YOUR PROJECT’S ON SOLID GROUND WITH RST.</h3>
-                        <h4>
-                            RST was founded in 1977, when Robert Straghan Sr. built a better pneumatic piezometer. We’ve come a long way since then, but some things haven’t changed. Relentless curiosity and a drive to solve exciting problems still fuel us.<br /><br />
-                            In our bustling lab, we’re continually devising original solutions to evolving engineering challenges. Our sensors enable the next generation of projects so you can go places you’ve never been before with confidence.<br /><br />
-                            For over 40 years, RST’s pioneering technologies have enabled iconic infrastructure projects, including dams, tunnels, bridges, and more. From our base in Western Canada, we’ve grown a reputation for right-fit solutions that span the lifecycle of your project, from designing and building to training, installing, inspecting and updating monitoring systems.
-                            That’s a legacy worth protecting.
-                        </h4>
-                        <Button type="primary" size="large">REQUEST A QUOTE</Button>
-                    </Col>
-                    <Col xs={24} md={12} className="about-img">
-                        <img src={Woman} alt="Woman" />
-                    </Col>
-                </Row>
-
-                
-            </Container>
-    </section>
+   
 
     <section id="gratis1">
         <Container>
@@ -261,61 +224,56 @@ function Index() {
     </section>
 
     <section>
-    <Container>
-      <div className='corusel-wrap'>
-        <h2>Videolar:</h2>
-        <div className="container mx-auto px-2 5">
-            <h1 className=" text-center text-[20px] py-2">Carusel test </h1>
-            <div className="swiper-wrapper-test">
-                <Swiper
-                    effect={'coverflow'}
-                    grabCursor={true}
-                    centeredSlides={true}
-                    slidesPerView={'auto'}
-                    coverflowEffect={{
-                        rotate: 50,
-                        stretch: 0,
-                        depth: 100,
-                        modifier: 1,
-                        slideShadows: true,
-                    }}
-                    pagination={true}
-                    modules={[EffectCoverflow, Pagination]}
-                    className="mySwiper"
-                >
-                    <SwiperSlide>
-                        <img src="https://swiperjs.com/demos/images/nature-1.jpg" />
-                    </SwiperSlide>
-                    <SwiperSlide>
-                        <img src="https://swiperjs.com/demos/images/nature-2.jpg" />
-                    </SwiperSlide>
-                    <SwiperSlide>
-                        <img src="https://swiperjs.com/demos/images/nature-3.jpg" />
-                    </SwiperSlide>
-                    <SwiperSlide>
-                        <img src="https://swiperjs.com/demos/images/nature-4.jpg" />
-                    </SwiperSlide>
-                    <SwiperSlide>
-                        <img src="https://swiperjs.com/demos/images/nature-5.jpg" />
-                    </SwiperSlide>
-                    <SwiperSlide>
-                        <img src="https://swiperjs.com/demos/images/nature-6.jpg" />
-                    </SwiperSlide>
-                    <SwiperSlide>
-                        <img src="https://swiperjs.com/demos/images/nature-7.jpg" />
-                    </SwiperSlide>
-                    <SwiperSlide>
-                        <img src="https://swiperjs.com/demos/images/nature-8.jpg" />
-                    </SwiperSlide>
-                    <SwiperSlide>
-                        <img src="https://swiperjs.com/demos/images/nature-9.jpg" />
-                    </SwiperSlide>
-                </Swiper>
+
+      <Container>
+        <div className='video-text'>
+            <h2>Videolar</h2>
+        </div>
+      <div id="app">
+    
+      <Swiper
+        effect={'coverflow'}
+        grabCursor={true}
+        centeredSlides={true}
+        slidesPerView={3}
+        spaceBetween={-60}
+        coverflowEffect={{
+          rotate: 0,
+          stretch: 100,
+          depth: 300,
+          modifier: 1,
+          slideShadows: false,
+        }}
+        navigation={true}
+        modules={[EffectCoverflow, Navigation]}
+        className="mySwiper"
+      >
+        {videos.map((video, index) => (
+          <SwiperSlide key={index}>
+            <div className="video-slide" onClick={() => handleIframeClick(index)}>
+              <img src={`https://img.youtube.com/vi/${video.id}/0.jpg`} alt={video.name} />
+              <div className="video-overlay">
+                <h3>{video.name}</h3>
+                <p>{video.title}</p>
+                <button className="play-button">▶</button>
+              </div>
+              <iframe
+                ref={(el) => (iframeRefs.current[index] = el)}
+                width="100%"
+                height="100%"
+                src={`https://www.youtube.com/embed/${video.id}?enablejsapi=1`}
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+              ></iframe>
             </div>
+          </SwiperSlide>
+        ))}
+      </Swiper>
     </div>
-       
-      </div>
-    </Container>
+
+      </Container>
+  
     </section>
 
    
