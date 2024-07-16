@@ -13,7 +13,7 @@ const navList = [
     },
     {
         path:"/malumotlar"  ,
-        title:"Malumotlar",
+        title:"Kompaniya haqida",
     },
     {
         path:"/yangiliklar"  ,

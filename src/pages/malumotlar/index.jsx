@@ -27,7 +27,7 @@ function Index() {
 
   return (
     <Layout>
-      <Content style={{ padding: '50px' }}>
+      <Content style={{ padding: '50px', }}>
         <Container>
           <div>
             <Title level={2}>Kompanya haiqida</Title>
