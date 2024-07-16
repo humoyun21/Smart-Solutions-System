@@ -1,11 +1,11 @@
 
 import React, { useRef } from 'react';
-import "./style.scss";
 import { Container } from "@containers";
 import { Carousel, Typography ,Row, Col, Button, Card } from "antd";
-
 import { Swiper, SwiperSlide } from 'swiper/react';
 
+//style
+import "./style.scss";
 
 // Import Swiper styles
 import 'swiper/css';
@@ -13,36 +13,47 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
 import 'swiper/css/effect-coverflow';
-
 import { EffectCoverflow, Navigation } from 'swiper/modules';
 
 
 
 //  Images
+
 import Corusle1 from "../../assets/images/corusel1.png";
 import Corusle2 from "../../assets/images/corusel2.png";
 import Corusle3 from "../../assets/images/corusel3.jpg";
-import Feature1 from "../../assets/images/featured1.jpg";
-import Feature2 from "../../assets/images/featured2.jpg";
 import Feature3 from "../../assets/images/featured3.jpg";
 
 
+//product image:
+
+import Smartwater from "../../assets/images/smartwater.jpg";
+import Smartwell from "../../assets/images/smartwell.jpg";
+import Vertushka from "../../assets/images/vertushka.jpg";
+import Piezometr from "../../assets/images/piezometr.jpg";
+import Smartchannel from "../../assets/images/smartchannel.jpg";
+
+
+//news images
+
+import Yangiliklardayjesti from "../../assets/images/yangiliklardayjesti.png";
+import Xorazm from "../../assets/images/xorazm.png";
+import Germanya from "../../assets/images/germanya.png";
+import Tashkent from "../../assets/images/tashkent.png";
 
 const { Title, Paragraph } = Typography;
-
-
 const items = [
   {
     bgImage: Corusle1,
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam aliquet.",
-    title: "Lorem ipsum dolor",
-    buttonText: "More Read",
+      "«Smart Solutions System» aqlli texnologiyalarni joriy qilishda O'zbekistondagi yetakchi kompaniyalardan biri hisoblanadi. Suv inshootlari, nasos stansiyalari, gidro uzellar va suv omborlarini avtomatlashtirish va monitoring qilish kompaniyaning asosiy yo’nalishlaridan biri.",
+    title: "Innovatsiya, sifat va ishonchlilik kelajakni belgilaydi!",
+    buttonText: "Batafsil",
   },
   {
     bgImage: Corusle2,
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam aliquet.",
+      "«Smart Solutions System» aqlli texnologiyalarni joriy qilishda O'zbekistondagi yetakchi kompaniyalardan biri hisoblanadi. Suv inshootlari, nasos stansiyalari, gidro uzellar va suv omborlarini avtomatlashtirish va monitoring qilish kompaniyaning asosiy yo’nalishlaridan biri.",
     title: "Lorem ipsum dolor",
     buttonText: "Sale Now",
   },
@@ -56,58 +67,77 @@ const items = [
 ];
 
 const { Meta } = Card;
+//Mahsulotlar
 const productData = [
     {
-      title: "Hymn to the United Nations",
+      title: "Smart Water",
       description:
-        "Get inspired by this revived W.H. Auden's Hymn to the United Nations. Let music for peace Be the paradigm, For peace means to change At the right time, As the World-Clock, Goes Tick and Tock.So maythe story Of our human city Presently move",
-      image: Feature1,
-      link: "Read-more",
+        "Suv sathi va uning sarfini onlayn monitoring qilish qurilmasi",
+      image: Smartwater,
+      link: "Batafsil",
     },
     {
-      title: "A symbol of hope for global unity",
+      title: "Smart Well",
       description:
-        "In 1945, representatives of 50 countries met in Sanancisco at the United Nations Conference on International Organization to draw up the United  Nations Charter. The United Nations officially came into existence on 24 October 1945",
-      image: Feature2,
-      link: "Read-more",
+        "Quduqlarda suv sho’rlanishini o'lchash va suv sathini hisoblash imkoniyatiga ega.",
+      image: Smartwell,
+      link: "Batafsil",
     },
     {
-      title: "How it Started?",
+      title: "Piezometr(Хлопушка)",
       description:
-        "In 1945, representatives of 50 countries met in Sanancisco at the United Nations Conference on International Organization to draw up the United  Nations Charter. The United Nations officially came into existence on 24 October 1945",
-      image: Feature3,
-      link: "Read-more",
+        "Qurilma quduqlarda suv sathini o’lchash uchun ishlatiladi.",
+      image: Piezometr,
+      link: "Batafsil",
     },
+    {
+      title: "Vertushka",
+      description:
+        "Suv oqimi tezligi va sathini o'lchash imkoniyatiga ega. ",
+      image: Vertushka,
+      link: "Batafsil",
+    },
+    {
+      title: "Smart Channel",
+      description:
+        "Smart channel - bu aqlli suv o’lchash qurilmasi bo’lib asosan kichik kanallardagi suv sarfini o’lchash uchun mo’ljallangan.",
+      image: Smartchannel,
+      link: "Batafsil",
+    },
+
+    
     
   ];
+//yangiliklar
 const newsData = [
     {
-      title: "Hymn to the United Nations",
+      title: "Yangiliklar dayjesti (08.07.2024 - 15.07.2024)",
       description:
-        "Get inspired by this revived W.H. Auden's Hymn to the United Nations. Let music for peace Be the paradigm, For peace means to change At the right time, As the World-Clock, Goes Tick and Tock.So maythe story Of our human city Presently move",
-      image: Feature1,
-      link: "Read-more",
+        "Qozog‘iston Xitoy korporatsiyalari bilan suv resurslarini boshqarish bo‘yicha hamkorlik masalalarini ko’rib chiqmoqda. Xitoy Xalq Respublikasi Raisi Si Szinpinning Qozog‘istonga davlat tashrifi doirasida Suv xo‘jaligi va irrigatsiya vaziri Nurjan Nurjigitov Xitoyning nufuzli korporatsiyalari bilan Qozog‘istonda suv resurslarini boshqarish va infratuzilmasini rivojlantirish masalalarini muhokama qildi.  ",
+      image: Yangiliklardayjesti,
+      link: "Batafsil",
     },
     {
-      title: "A symbol of hope for global unity",
+      title: "Xorazmda dala-o'quv seminari bo'lib o'tdi",
       description:
-        "In 1945, representatives of 50 countries met in Sanancisco at the United Nations Conference on International Organization to draw up the United  Nations Charter. The United Nations officially came into existence on 24 October 1945",
-      image: Feature2,
-      link: "Read-more",
+        "Xorazm ilmiy-tajriba stansiyasi hududida suv o‘lchash va suv hisobini yuritish mavzusida ko‘rgazmali dala-o‘quv seminari bo‘lib o‘tdi",
+      image: Xorazm,
+      link: "Batafsil",
     },
     {
-      title: "How it Started?",
+      title: "Shanghai Panda Machinery (Group) Co.,Ltd bilan uchrashuv",
       description:
-        "In 1945, representatives of 50 countries met in Sanancisco at the United Nations Conference on International Organization to draw up the United  Nations Charter. The United Nations officially came into existence on 24 October 1945",
-      image: Feature3,
-      link: "Read-more",
+        "Xitoy davlatining Shanghai Panda Machinery (Group) Co.,Ltd kompaniyasi tomonidan ishlab chiqarilgan maxsus suv o'lchovchi qurilmalar Smart Solutions System MChJ ga olib kelindi va xar bitta uskuna kesimida Shanghai Panda Machinery (Group) Co.,Ltd mutaxassislari tomonidan taqdimotlar qilindi.",
+      image: Germanya,
+      link: "Batafsil",
     },
     {
-        title: "How it Started?",
+        title: "Toshkent Xalqaro Investitsiya Forumi",
         description:
-          "In 1945, representatives of 50 countries met in Sanancisco at the United Nations Conference on International Organization to draw up the United  Nations Charter. The United Nations officially came into existence on 24 October 1945",
+          "O'zida 2500 mamlakatdan 93 nafardan ziyod ishtirokchini jamlagan III Toshkent Xalqaro Investitsiya Forumi (TIIF) investitsiya sohasida muloqotni rivojlantirish va ilg'or tajribalarni almashish uchun yetakchi global platforma maqomini mustahkamladi.",
         image: Feature3,
-        link: "Read-more",
+        image: Tashkent,
+        link: "Batafsil",
       },
 ];
 
@@ -124,18 +154,19 @@ function Index() {
       }
     });
   };
-
+//videos
   const videos = [
-    { id: 'M7lc1UVf-VE', name: 'Mike', title: 'Fashion Director' },
-    { id: 'sBws8MSXN7A', name: 'Samite', title: 'Designer' },
-    { id: 'ScMzIvxBSi4', name: 'Kaity', title: 'Fashion Director' },
-    { id: 'K4TOrB7at0Y', name: 'Oakes', title: 'Photographer' },
-    { id: 'aqz-KE-bpKQ', name: 'Lauren', title: 'Model' },
-    { id: '9bZkp7q19f0', name: 'Ryan', title: 'Stylist' },
+    { id: 'AXOEeI5ZpRc?si=mwMkVMuEpahfqMWh-VE', name: 'Mike', title: 'Fashion Director' },
+    { id: 'KmYBFeRtJiU?si=Vtbsa8j8jcZBPMps', name: 'Samite', title: 'Designer' },
+    { id: 'OQIjjNkmznY?si=jkPtYjUGlxHiu5PA', name: 'Kaity', title: 'Fashion Director' },
+    { id: 'sE_GVLjh-4o?si=gOjB5XT4S4FOl2TM', name: 'Oakes', title: 'Photographer' },
+    { id: 'feYodaCJjfY?si=iLTpT7iABlt8RrnV', name: 'Lauren', title: 'Model' },
+    { id: 'SC7Z4psEISo?si=qumnvw_M42rQXREa', name: 'Ryan', title: 'Stylist' },
+    { id: 'dA8KNJ2OeX8?si=uh4_XMSTHvcXLIHR', name: 'Ryan', title: 'Stylist' },
   ];
 
 
-    const truncateDescription = (description, length) => {
+  const truncateDescription = (description, length) => {
         return description.length > length ? description.substring(0, length) + "..." : description;
       };
   return (
@@ -177,7 +208,7 @@ function Index() {
                     
                     padding: "10px 30px",
                     border: "2px solid rgb(1, 154, 204)",
-                    color: "#fff",
+                    color: "#1c1e53",
                     borderRadius: "5px",
                     fontSize: 20,
                     fontWeight: "bold",
@@ -198,12 +229,12 @@ function Index() {
     <section id="gratis1">
         <Container>
           <div className="container" style={{ padding: '10px', borderRadius: '2px' }}>
-            <Title level={4} style={{ fontSize: 18, fontWeight: 600, textAlign: 'left', marginLeft: 5, marginBottom: 1, color: '#0099ff' }}>
-              Our product
+            <Title level={4} style={{ fontSize: 30, fontWeight: 600, textAlign: 'left', marginLeft: 5, marginBottom: 50, color: '#0099ff' }}>
+            Mahsulotlar
             </Title>
-            <Title level={5} style={{ fontSize: 24, marginLeft: 5, marginBottom: 5, textAlign: 'left', color: 'rgb(1, 154, 204)', textTransform: 'uppercase' }}>
+            {/* <Title level={5} style={{ fontSize: 24, marginLeft: 5, marginBottom: 5, textAlign: 'left', color: 'rgb(1, 154, 204)', textTransform: 'uppercase' }}>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas risus sapien, posuere ac iaculis sed.
-            </Title>
+            </Title> */}
             <Row gutter={[16, 16]}>
               {productData.map((item, index) => (
                 <Col xs={24} sm={12} md={8} key={index}>
@@ -275,8 +306,6 @@ function Index() {
       </Container>
   
     </section>
-
-   
 
 
     <section id="gratis1">

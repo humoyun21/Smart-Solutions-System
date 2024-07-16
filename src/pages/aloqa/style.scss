@@ -1,0 +1,91 @@
+.contact-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    padding-top: 60px;
+  
+    .contact-info {
+      display: flex;
+      justify-content: space-around;
+      width: 100%;
+      background-color: #f9f9f9;
+      padding: 1rem;
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  
+      .info-block {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0.5rem;
+  
+        p:first-child {
+          font-size: 1.5rem;
+        }
+      }
+    }
+  
+    .form-and-map {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      gap: 2rem;
+  
+      .contact-form {
+        flex: 1;
+        padding: 1rem;
+        background-color: #f9f9f9;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+     
+  
+        h2 {
+          margin-bottom: 1rem;
+        }
+  
+        .form-group {
+          margin-bottom: 1rem;
+  
+          label {
+            display: block;
+            margin-bottom: 0.5rem;
+          }
+  
+          input,
+          textarea {
+            width: 100%;
+            padding: 0.5rem;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+          }
+        }
+  
+        button {
+          padding: 0.5rem 1rem;
+          background-color: #007bff;
+          color: #fff;
+          border: none;
+          border-radius: 5px;
+          cursor: pointer;
+          &:hover {
+            background-color: #0056b3;
+          }
+        }
+      }
+  
+      .map {
+    
+        width: 600px;
+        iframe {
+        margin-top: 300px;
+        margin-left: 750px;
+          width: 600px;
+          height: 500px;
+          border: none;
+          border-radius: 5px;
+        }
+      }
+    }
+  }
+  
