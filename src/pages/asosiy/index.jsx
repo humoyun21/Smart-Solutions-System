@@ -141,22 +141,22 @@ const items = [
   {
     bgImage: MainSection1,
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam aliquet.",
-    title: "Lorem ipsum dolor",
+      "«Smart Solutions System» aqlli texnologiyalarni joriy qilishda O'zbekistondagi yetakchi kompaniyalardan biri hisoblanadi. Suv inshootlari, nasos stansiyalari, gidro uzellar va suv omborlarini avtomatlashtirish va monitoring qilish kompaniyaning asosiy yo’nalishlaridan biri.",
+    title: "Innovatsiya, sifat va ishonchlilik kelajakni belgilaydi!",
     buttonText: "More Read",
   },
   {
     bgImage: MainSection2,
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam aliquet.",
-    title: "Lorem ipsum dolor",
+      "«Smart Solutions System» aqlli texnologiyalarni joriy qilishda O'zbekistondagi yetakchi kompaniyalardan biri hisoblanadi. Suv inshootlari, nasos stansiyalari, gidro uzellar va suv omborlarini avtomatlashtirish va monitoring qilish kompaniyaning asosiy yo’nalishlaridan biri.",
+    title: "Innovatsiya, sifat va ishonchlilik kelajakni belgilaydi!",
     buttonText: "Sale Now",
   },
   {
     bgImage: MainSection3,
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam aliquet.",
-    title: "Lorem ipsum dolor",
+      "«Smart Solutions System» aqlli texnologiyalarni joriy qilishda O'zbekistondagi yetakchi kompaniyalardan biri hisoblanadi. Suv inshootlari, nasos stansiyalari, gidro uzellar va suv omborlarini avtomatlashtirish va monitoring qilish kompaniyaning asosiy yo’nalishlaridan biri.",
+    title: "Innovatsiya, sifat va ishonchlilik kelajakni belgilaydi!",
     buttonText: "Contact Me",
   },
 ];
@@ -295,19 +295,19 @@ function Index() {
               }}
               width={400}
             >
-              <Typography
+              <Box
                 component="h4"
                 sx={{
-                  fontSize: 60,
+                  fontSize: 20,
                   fontWeight: "bold",
                   color: "rgb(1, 154, 204)",
                   marginBottom: 5,
                 }}
               >
                 {item.title}
-              </Typography>
+              </Box>
 
-              <Typography
+              <Box
                 component="h4"
                 sx={{
                   fontSize: 20,
@@ -317,7 +317,7 @@ function Index() {
                 }}
               >
                 {item.description}
-              </Typography>
+              </Box>
 
               <a
                 to="/"
@@ -465,6 +465,7 @@ function Index() {
       </Box>
 
       {/* Service */}
+      
       <Box
         sx={{
           padding: 4,
@@ -518,7 +519,7 @@ function Index() {
               elevation={4}
               key={index}
             >
-              <Typography
+              <Box
                 sx={{
                   fontWeight: "bold",
                   color: "#444",
@@ -528,9 +529,9 @@ function Index() {
                 component="h5"
               >
                 {item.title}
-              </Typography>
+              </Box>
 
-              <Typography
+              <Box
                 sx={{
                   color: "#444",
                   fontSize: 14,
@@ -538,7 +539,7 @@ function Index() {
                 component="p"
               >
                 {item.description}
-              </Typography>
+              </Box>
 
               <Box
                 sx={{
@@ -572,6 +573,7 @@ function Index() {
       </Box>
 
       {/*Profuct category */}
+
       <section id="gratis1">
     <Container>
       <div className="container" style={{ padding: "10px", borderRadius: "2px" }}>
@@ -603,6 +605,7 @@ function Index() {
       </div>
     </Container>
       </section>
+
       {/* Video shorts*/}
       <section>
         <Container>
@@ -666,6 +669,7 @@ function Index() {
           </div>
         </Container>
       </section>
+
       {/* News*/}
       <section id="gratis1">
         <div className="container">
