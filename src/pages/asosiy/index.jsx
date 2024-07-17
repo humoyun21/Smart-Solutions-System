@@ -360,7 +360,7 @@ function Index() {
             paddingTop: 2,
           }}
         >
-          <Typography
+          <Box
             sx={{
               fontSize: 14,
               fontWeight: 600,
@@ -368,9 +368,9 @@ function Index() {
             component="h4"
           >
             BIZ HAQIMIZDA QISQACHA MA'LUMOT
-          </Typography>
+          </Box>
 
-          <Typography
+          <Box
             sx={{
               marginTop: 2,
               fontSize: 24,
@@ -380,6 +380,20 @@ function Index() {
           >
             BIZNING KOMPANIYAMIZ BILAN YAQINDAN TANISHING HAMDA O'ZINGIZ UCHUN
             FOYDALI MA'LUMOTLARNI OLING
+          </Box>
+
+          <Typography
+            sx={{
+              marginTop: 2,
+            }}
+            component="p"
+          >
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
+            consequat pharetra sapien bibendum congue. Ut eget nisl sit amet
+            orci viverra elementum. Maecenas vitae malesuada nisi. Aenean
+            finibus quam eget est suscipit, et luctus turpis tristique. Cras
+            sagittis faucibus maximus. Aliquam erat volutpat. Ut ac sapien ac
+            orci rhoncus iaculis.<br/> <br/>
           </Typography>
 
           <Typography
@@ -393,21 +407,7 @@ function Index() {
             orci viverra elementum. Maecenas vitae malesuada nisi. Aenean
             finibus quam eget est suscipit, et luctus turpis tristique. Cras
             sagittis faucibus maximus. Aliquam erat volutpat. Ut ac sapien ac
-            orci rhoncus iaculis.
-          </Typography>
-
-          <Typography
-            sx={{
-              marginTop: 2,
-            }}
-            component="p"
-          >
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
-            consequat pharetra sapien bibendum congue. Ut eget nisl sit amet
-            orci viverra elementum. Maecenas vitae malesuada nisi. Aenean
-            finibus quam eget est suscipit, et luctus turpis tristique. Cras
-            sagittis faucibus maximus. Aliquam erat volutpat. Ut ac sapien ac
-            orci rhoncus iaculis.
+            orci rhoncus iaculis. <br/> <br/>
           </Typography>
 
           <Typography
@@ -471,7 +471,7 @@ function Index() {
         }}
         component="section"
       >
-        <Typography
+        <Box
           sx={{
             fontSize: 18,
             fontWeight: 600,
@@ -483,9 +483,9 @@ function Index() {
           component="h4"
         >
           We Strive to
-        </Typography>
+        </Box>
 
-        <Typography
+        <Box
           component="h5"
           sx={{
             fontSize: 24,
@@ -496,7 +496,7 @@ function Index() {
           }}
         >
           DISCOVER OUR EXPERTISE
-        </Typography>
+        </Box>
 
         <Box
           sx={{
@@ -573,72 +573,35 @@ function Index() {
 
       {/*Profuct category */}
       <section id="gratis1">
-        <Container>
-          <div
-            className="container"
-            style={{ padding: "10px", borderRadius: "2px" }}
-          >
-            <Title
-              level={4}
-              style={{
-                fontSize: 30,
-                fontWeight: 600,
-                textAlign: "left",
-                marginLeft: 5,
-                marginBottom: 50,
-                color: "#0099ff",
-              }}
-            >
-              Mahsulotlar
-            </Title>
-            {/* <Title level={5} style={{ fontSize: 24, marginLeft: 5, marginBottom: 5, textAlign: 'left', color: 'rgb(1, 154, 204)', textTransform: 'uppercase' }}>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas risus sapien, posuere ac iaculis sed.
-            </Title> */}
-            <Row gutter={[16, 16]}>
-              {productData.map((item, index) => (
-                <Col xs={24} sm={12} md={8} key={index}>
-                  <Card
-                    hoverable
-                    cover={
-                      <img
-                        className="card__img"
-                        src={item.image}
-                        alt={`Feature ${index}`}
-                      />
-                    }
-                  >
-                    <Card.Meta
-                      title={
-                        <Title
-                          level={4}
-                          className="card__title"
-                          style={{ color: "#0099ff" }}
-                        >
-                          {item.title}
-                        </Title>
-                      }
-                      description={
-                        <Paragraph className="card__description">
-                          {item.description}
-                        </Paragraph>
-                      }
-                    />
-                    <Button
-                      type="primary"
-                      className="card__button"
-                      style={{
-                        backgroundColor: "rgb(1, 154, 204)",
-                        borderColor: "rgb(1, 154, 204)",
-                      }}
-                    >
-                      {item.link}
-                    </Button>
-                  </Card>
-                </Col>
-              ))}
-            </Row>
-          </div>
-        </Container>
+    <Container>
+      <div className="container" style={{ padding: "10px", borderRadius: "2px" }}>
+        <Title level={4} style={{ fontSize: 30, fontWeight: 600, textAlign: "left", marginLeft: 5, marginBottom: 50, color: "#0099ff" }}>
+          Mahsulotlar
+        </Title>
+        <Row gutter={[16, 16]}>
+          {productData.map((item, index) => (
+            <Col xs={24} sm={12} md={8} key={index}>
+              <Card hoverable className="custom-card">
+                <div className="card-cover">
+                  <img className="card-img" src={item.image} alt={`Feature ${index}`} />
+                  <div className="card-title">
+                    <Title level={4} className="card-title-text" style={{ color: "#fff" }}>
+                      {item.title}
+                    </Title>
+                  </div>
+                </div>
+                <div className="card-hover-content">
+                  <Paragraph className="card-description">{item.description}</Paragraph>
+                  <Button type="primary" className="card-button" style={{ backgroundColor: "rgb(1, 154, 204)", color: " #fff" }}>
+                    {item.link}
+                  </Button>
+                </div>
+              </Card>
+            </Col>
+          ))}
+        </Row>
+      </div>
+    </Container>
       </section>
       {/* Video shorts*/}
       <section>
@@ -699,7 +662,7 @@ function Index() {
                 </SwiperSlide>
               ))}
             </Swiper>
-            ;
+            
           </div>
         </Container>
       </section>

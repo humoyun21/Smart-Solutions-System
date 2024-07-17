@@ -1,5 +1,6 @@
 import {useEffect, useRef, useState} from "react";
-
+import { NavLink  } from 'react-router-dom';
+import navList from "../../router/ruter.js"
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
 import Button from "@mui/material/Button";
@@ -49,32 +50,32 @@ const data = [
 const dataNavbar = [
   {
     title: "Maxsulotlar",
-    link: "/products",
+    link: "/maxsulotlar",
   },
 
   {
     title: "Xizmatlar",
-    link: "/services",
+    link: "/xizmatlar",
   },
 
   {
     title: "Loyihalar",
-    link: "/projects",
+    link: "/loyihalar",
   },
 
   {
     title: "Ma'lumotlar",
-    link: "/about",
+    link: "/malumotlar",
   },
 
   {
     title: "Yangiliklar",
-    link: "/news",
+    link: "/yangiliklar",
   },
 
   {
     title: "Aloqa",
-    link: "/contact",
+    link: "/aloqa",
   },
 ];
 
