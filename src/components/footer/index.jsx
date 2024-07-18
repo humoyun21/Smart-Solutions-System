@@ -7,7 +7,7 @@ import Water from "../../assets/images/logo1.svg";
 const Index = () => {
     return (
         <footer className="footer">
-            <Container>
+            
                 <Row className="wrap" justify="space-between" align="middle">
                     <Col xs={24} md={12} className="wrap-send">
                         <h2>NO CREDIT CARD REQUIRED</h2>
@@ -54,7 +54,7 @@ const Index = () => {
                         </div>
                     </Col>
                 </Row>
-            </Container>
+            
         </footer>
     );
 };

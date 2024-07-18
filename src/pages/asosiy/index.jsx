@@ -574,13 +574,12 @@ function Index() {
 
       {/*Profuct category */}
 
-      <section id="gratis1">
-    <Container>
-      <div className="container" style={{ padding: "10px", borderRadius: "2px" }}> 
+      <section>
+      <div   className="product-wrap"> 
         <Title level={4} style={{ fontSize: 20, fontWeight: 600, textAlign: "left",  color: "#444" }}>
           Mahsulotlar
         </Title>
-        <Title level={4} style={{ fontSize: 28, fontWeight: 600, textAlign: "left",marginBottom: 15, color: "rgb(1, 154, 204)" }}>
+        <Title  level={4} style={{ fontSize: 28, fontWeight: 600, textAlign: "left",marginBottom: 15, color: "rgb(1, 154, 204)" }}>
         DISCOVER OUR EXPERTISE
         </Title>
         <Row gutter={[16, 16]}>
@@ -590,14 +589,14 @@ function Index() {
                 <div className="card-cover">
                   <img className="card-img" src={item.image} alt={`Feature ${index}`} />
                   <div className="card-title">
-                    <Title level={4} className="card-title-text" style={{ color: "#fff" }}>
+                    <Title level={4} className="card-title-text" >
                       {item.title}
                     </Title>
                   </div>
                 </div>
                 <div className="card-hover-content">
                   <Paragraph className="card-description">{item.description}</Paragraph>
-                  <Button type="primary" className="card-button" style={{ backgroundColor: "rgb(1, 154, 204)", color: " #fff" }}>
+                  <Button type="primary" className="card-button" style={{ backgroundColor: "#1a8ebc99", color: " #fff" }}>
                     {item.link}
                   </Button>
                 </div>
@@ -605,20 +604,20 @@ function Index() {
             </Col>
           ))}
         </Row>
-      </div>
-      <div className="products-btn">
+
+        <div className="products-btn">
         <button>
           All products
         </button>
       </div>
-    </Container>
+      </div>
       </section>
 
     
 
       {/* News*/}
-      <section id="gratis1">
-        <div className="container">
+      <section >
+          <div className="news-wrap">
           <div className="content-box">
             <h2 className="section-title1">Yangiliklar</h2>
 
@@ -668,14 +667,16 @@ function Index() {
         <button>
           All News
         </button>
-      </div>
+   
         </div>
+          </div>
+        
       </section>
 
         {/* Video shorts*/}
         <section>
-        <Container>
-          <div className="video-text">
+       <div className="video-wrap">
+       <div className="video-text">
             <h2>Videolar</h2>
             <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. </h3>
           </div>
@@ -738,8 +739,11 @@ function Index() {
         <button>
           All video
         </button>
-      </div>
-        </Container>
+          </div>
+        
+       </div>
+          
+       
       </section>
 
       

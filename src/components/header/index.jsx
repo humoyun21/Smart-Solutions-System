@@ -114,8 +114,9 @@ function Header() {
   }, [open]);
 
   return (
-    <AppBar
+    <AppBar 
       sx={{
+        
         bgcolor: "#fff",
         boxShadow: "0px 4px 12px -8px rgba(102,102,102,0.46)",
       }}
