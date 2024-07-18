@@ -24,7 +24,10 @@
     width: 100%;
     height: auto;
   }
-  
+
+
+//product
+ 
 
   
   //yangiliklar
@@ -41,11 +44,18 @@
   }
   
   .section-title {
-    font-size: 18px;
+    font-size: 27px;
     font-weight: 600;
     text-align: left;
     margin-bottom: 16px;
-    color: #0099ff;
+    color: rgb(1, 154, 204)
+  }
+  .section-title1 {
+    font-size: 18px;
+    font-weight: 600;
+    text-align: left;
+    margin-bottom: 3px;
+    color: #000000;
   }
   
   .grid-container {
@@ -73,7 +83,9 @@
       grid-row: auto !important;
     }
   }
-  
+  .card-end {
+    grid-column: 1 / -1;
+  }
   .card-article:hover {
     transform: translateY(-4px);
   }
@@ -293,11 +305,19 @@
 .video-text{
 
   h2{
-    color: #0099ff;
+    color: #000000;
     display: flex;
     align-items: center;
-    font-size: 35px;
+    font-size: 20px;
     padding-top: 40px;
+  }
+  h3{
+    color: rgb(1, 154, 204);
+    display: flex;
+    align-items: center;
+    font-size: 30px;
+    padding-top: 10px;
+    padding-bottom: 10px;
   }
 }
 
@@ -402,6 +422,7 @@ iframe {
 //product
 
 .custom-card {
+ 
   position: relative;
   overflow: hidden;
   border-radius: 8px;
@@ -465,6 +486,20 @@ iframe {
     color: #fff; /* Set description text color to white */
   }
 
+}
+.products-btn{
+  display: flex;
+  justify-content: center;
+  
+  button{
+   
+    padding: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    color: #ffffff;
+    background-color: #00aaff;
+    border-radius: 5px;
+  }
 }
 
 

@@ -12,7 +12,7 @@ const navList = [
         title:"Loyihalar",
     },
     {
-        path:"/malumotlar"  ,
+        path:"/ malumotlar"  ,
         title:"Kompaniya haqida",
     },
     {

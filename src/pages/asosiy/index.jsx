@@ -293,7 +293,7 @@ function Index() {
               sx={{
                 textAlign: "left",
               }}
-              width={400}
+              width={600}
             >
               <Box
                 component="h4"
@@ -382,7 +382,7 @@ function Index() {
             FOYDALI MA'LUMOTLARNI OLING
           </Box>
 
-          <Typography
+          <Box
             sx={{
               marginTop: 2,
             }}
@@ -394,9 +394,9 @@ function Index() {
             finibus quam eget est suscipit, et luctus turpis tristique. Cras
             sagittis faucibus maximus. Aliquam erat volutpat. Ut ac sapien ac
             orci rhoncus iaculis.<br/> <br/>
-          </Typography>
+          </Box>
 
-          <Typography
+          <Box 
             sx={{
               marginTop: 2,
             }}
@@ -408,9 +408,9 @@ function Index() {
             finibus quam eget est suscipit, et luctus turpis tristique. Cras
             sagittis faucibus maximus. Aliquam erat volutpat. Ut ac sapien ac
             orci rhoncus iaculis. <br/> <br/>
-          </Typography>
+          </Box>
 
-          <Typography
+          <Box
             sx={{
               marginTop: 2,
             }}
@@ -422,7 +422,7 @@ function Index() {
             finibus quam eget est suscipit, et luctus turpis tristique. Cras
             sagittis faucibus maximus. Aliquam erat volutpat. Ut ac sapien ac
             orci rhoncus iaculis.
-          </Typography>
+          </Box>
         </Box>
 
         <Carousel
@@ -465,7 +465,7 @@ function Index() {
       </Box>
 
       {/* Service */}
-      
+
       <Box
         sx={{
           padding: 4,
@@ -576,9 +576,12 @@ function Index() {
 
       <section id="gratis1">
     <Container>
-      <div className="container" style={{ padding: "10px", borderRadius: "2px" }}>
-        <Title level={4} style={{ fontSize: 30, fontWeight: 600, textAlign: "left", marginLeft: 5, marginBottom: 50, color: "#0099ff" }}>
+      <div className="container" style={{ padding: "10px", borderRadius: "2px" }}> 
+        <Title level={4} style={{ fontSize: 20, fontWeight: 600, textAlign: "left",  color: "#444" }}>
           Mahsulotlar
+        </Title>
+        <Title level={4} style={{ fontSize: 28, fontWeight: 600, textAlign: "left",marginBottom: 15, color: "rgb(1, 154, 204)" }}>
+        DISCOVER OUR EXPERTISE
         </Title>
         <Row gutter={[16, 16]}>
           {productData.map((item, index) => (
@@ -603,14 +606,78 @@ function Index() {
           ))}
         </Row>
       </div>
+      <div className="products-btn">
+        <button>
+          All products
+        </button>
+      </div>
     </Container>
       </section>
 
-      {/* Video shorts*/}
-      <section>
+    
+
+      {/* News*/}
+      <section id="gratis1">
+        <div className="container">
+          <div className="content-box">
+            <h2 className="section-title1">Yangiliklar</h2>
+
+            <h4 className="section-title">Lorem ipsum dolor.</h4>
+
+            <div className="grid-container ">
+              {newsData.map((item, index) => (
+
+               
+                <div
+
+                  className={`card-article  ${
+                    index === 0
+                      ? "card-featured"
+                      : index === 3
+                      ? "card-full-width"
+                      : "card-small"
+                  } ${
+                    index %4==0 && 'card-end'
+                  }` 
+                }
+                  key={index}
+                >
+                  <img
+                    className={`card-img ${
+                      index === 0 || index === 3 ? "card-img-short" : ""
+                    }`}
+                    src={item.image}
+                    alt={`Feature ${index}`}
+                  />
+                  <div className="card-data">
+                    <h4 className="card-title">{item.title}</h4>
+                    {index === 0 ? (
+                      <p className="card-description">{item.description}</p>
+                    ) : (
+                      <p className="card-description">
+                        {truncateDescription(item.description, 100)}
+                      </p>
+                    )}
+                    <p className="card-button">{item.link}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+          <div className="products-btn">
+        <button>
+          All News
+        </button>
+      </div>
+        </div>
+      </section>
+
+        {/* Video shorts*/}
+        <section>
         <Container>
           <div className="video-text">
             <h2>Videolar</h2>
+            <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. </h3>
           </div>
           <div id="app">
             <Swiper
@@ -667,50 +734,15 @@ function Index() {
             </Swiper>
             
           </div>
+          <div className="products-btn">
+        <button>
+          All video
+        </button>
+      </div>
         </Container>
       </section>
 
-      {/* News*/}
-      <section id="gratis1">
-        <div className="container">
-          <div className="content-box">
-            <h4 className="section-title">Yangiliklar</h4>
-            <div className="grid-container">
-              {newsData.map((item, index) => (
-                <div
-                  className={`card-article ${
-                    index === 0
-                      ? "card-featured"
-                      : index === 3
-                      ? "card-full-width"
-                      : "card-small"
-                  }`}
-                  key={index}
-                >
-                  <img
-                    className={`card-img ${
-                      index === 0 || index === 3 ? "card-img-short" : ""
-                    }`}
-                    src={item.image}
-                    alt={`Feature ${index}`}
-                  />
-                  <div className="card-data">
-                    <h4 className="card-title">{item.title}</h4>
-                    {index === 0 ? (
-                      <p className="card-description">{item.description}</p>
-                    ) : (
-                      <p className="card-description">
-                        {truncateDescription(item.description, 100)}
-                      </p>
-                    )}
-                    <p className="card-button">{item.link}</p>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
+      
     </>
   );
 }
