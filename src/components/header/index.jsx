@@ -1,6 +1,4 @@
 import {useEffect, useRef, useState} from "react";
-import { NavLink  } from 'react-router-dom';
-import navList from "../../router/ruter.js"
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
 import Button from "@mui/material/Button";
