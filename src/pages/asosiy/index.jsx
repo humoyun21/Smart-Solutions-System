@@ -62,6 +62,20 @@ import Xorazm from "../../assets/images/xorazm.png";
 import Germanya from "../../assets/images/germanya.png";
 import Tashkent from "../../assets/images/tashkent.png";
 
+//Parents
+import Sux from "../../assets/images/sux.svg";
+import Bkpi from "../../assets/images/bkpi.svg";
+import Iroq from "../../assets/images/iroq.svg";
+import Suv from "../../assets/images/suv.png";
+import Muhum from "../../assets/images/muhum.png";
+import Sisgeo from "../../assets/images/sisgeo.png";
+import Taliho from "../../assets/images/taliho.png";
+import Xylem from "../../assets/images/xylem.png";
+import Winshef from "../../assets/images/winshef.png";
+import Daxi from "../../assets/images/daxi.png";
+import Dyp from "../../assets/images/dyp.png";
+import Panda from "../../assets/images/panda.png";
+
 const { Title, Paragraph } = Typography;
 
 const { Meta } = Card;
@@ -221,7 +235,6 @@ const serviceData = [
   },
 ];
 
-
 //contact
 
 const ContactForm = () => (
@@ -243,6 +256,9 @@ const ContactForm = () => (
     </Form.Item>
   </Form>
 );
+//parents
+
+
 
 function Index() {
   const iframeRefs = useRef([]);
@@ -290,6 +306,9 @@ function Index() {
       : description;
   };
 
+  
+
+  
   return (
     // Intro
     <>
@@ -813,7 +832,62 @@ function Index() {
     </Row>
           </div>
          </section>
-      
+
+          {/* Partners */}
+          <section className="partners-section">
+      <div className="container">
+        <h2>Mahalliy hamkorlar</h2>
+        <Row gutter={[16, 16]} justify="center">
+          {[Sux, Bkpi, Iroq, Muhum ,Suv].map((src, index) => (
+            <Col key={index} xs={24} sm={12} md={8} lg={6} xl={6}>
+              <Card
+                hoverable
+                cover={<img src={src} alt="logo" className="partner-logo" />}
+              >
+                <Card.Meta title="Company Name" description="Description" />
+              </Card>
+            </Col>
+          ))}
+        </Row>
+        <Row gutter={[24, 24]} justify="center">
+          {[,].map((src, index) => (
+            <Col key={index} xs={24} sm={12} md={8} lg={6} xl={6}>
+              <Card
+                hoverable
+                cover={<img src={src} alt="logo" className="partner-logo" />}
+              >
+                <Card.Meta title="Company Name" description="Description" />
+              </Card>
+            </Col>
+          ))}
+        </Row>
+        <h2>Xorijiy Hamkorlar</h2>
+        <Row gutter={[24, 24]} justify="center">
+          {[Sisgeo, Taliho, Xylem, Winshef ,Panda ,Dyp , Daxi].map((src, index) => (
+            <Col key={index} xs={24} sm={12} md={8} lg={6} xl={6}>
+              <Card
+                hoverable
+                cover={<img src={src} alt="logo" className="partner-logo" />}
+              >
+                <Card.Meta title="Company Name" description="Description" />
+              </Card>
+            </Col>
+          ))}
+        </Row>
+        <Row gutter={[24, 24]} justify="center">
+          {[ ].map((src, index) => (
+            <Col key={index} xs={24} sm={12} md={8} lg={6} xl={6}>
+              <Card
+                hoverable
+                cover={<img src={src} alt="logo" className="partner-logo" />}
+              >
+                <Card.Meta title="Company Name" description="Description" />
+              </Card>
+            </Col>
+          ))}
+        </Row>
+      </div>
+    </section>
     </>
   );
 }
