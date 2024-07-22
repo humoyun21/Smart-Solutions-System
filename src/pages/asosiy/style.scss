@@ -135,7 +135,7 @@
     font-weight: 600;
     text-align: left;
     margin-bottom: 16px;
-    color: rgb(1, 154, 204)
+    color: #019acc
   }
   .section-title1 {
     font-size: 18px;
@@ -161,7 +161,7 @@
     background-color: #f9f9f9;
     // padding: 10px;
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px #0000001a;
     cursor: pointer;
     transition: transform 0.2s;
   
@@ -300,7 +300,7 @@
   border-radius: 18px;
   overflow: hidden;
   position: relative;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 10px #0000001a;
   transition: transform 0.3s;
 }
 
@@ -332,7 +332,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background: rgba(0, 0, 0, 0.5);
+  background: #00000080;
   color: #fff;
   opacity: 0;
   transition: opacity 0.3s ease;
@@ -377,7 +377,8 @@ iframe {
 //parents
 .partners-section {
   padding: 40px 20px;
-
+  
+   
 }
 
 .partners-section  {
@@ -388,6 +389,7 @@ iframe {
     font-weight: 600;
     padding-top: 20px;
   }
+  
   
 }
 
@@ -402,7 +404,7 @@ iframe {
   text-align: center;
   border-radius: 10px;
   overflow: hidden;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 8px #0000001a;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -428,3 +430,14 @@ iframe {
   color: #888;
   padding-bottom: 20px;
 }
+
+
+//parents 
+
+.partner-logo {
+  
+  width: 100%;
+  height: 150px; /* Adjust height as needed */
+  object-fit: contain;
+}
+

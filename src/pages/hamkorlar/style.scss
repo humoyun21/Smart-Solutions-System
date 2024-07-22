@@ -1,0 +1,76 @@
+.localPartnerSwiper {
+    .swiper-slide {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: auto;
+  
+      .localPartnerCard {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 10px;
+        border: none; /* Remove border */
+      box-shadow: none; /* Remove box-shadow */
+        height: auto; /* Auto height for responsiveness */
+        width: 100%; /* Use full width of the container */
+        margin: 0 auto; /* Center the card */
+       
+     
+      }
+  
+      .localPartnerLogo {
+        width: 100%; /* Full width */
+        height: 150px; /* Fixed height for logos */
+        object-fit: contain;
+        margin-bottom: 10px;
+      }
+  
+      .MuiCardContent-root {
+        text-align: center;
+      }
+    }
+  }
+  
+  .foreignPartnerSwiper {
+    .swiper-slide {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: auto;
+  
+      .foreignPartnerCard {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 10px;
+        border: none; /* Remove border */
+        box-shadow: none; /* Remove box-shadow */
+        height: auto; /* Auto height for responsiveness */
+        width: 100%; /* Use full width of the container */
+        margin: 0 auto; /* Center the card */
+      }
+  
+      .foreignPartnerLogo {
+        width: 100%; /* Full width */
+        height: 150px; /* Fixed height for logos */
+        object-fit: contain;
+        margin-bottom: 10px;
+      }
+  
+      .MuiCardContent-root {
+        text-align: center;
+      }
+    }
+  }
+  h2{
+    padding: 40px;
+  }
+  .parent-text{
+    font-size: 25px;
+    font-weight: bold;
+    color: #019acc
+    
+  }
