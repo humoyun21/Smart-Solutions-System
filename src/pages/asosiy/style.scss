@@ -28,9 +28,15 @@
   
 
 //product
+.product{
+
+  background-color: #f4f6f8;
+}
 .product-wrap{
-  padding: 50px;
-    background-color: #f4f6f8;
+  padding-top: 40px !important;
+  padding-bottom: 40px !important;
+  padding: 120px;
+
   }
   .custom-card {
    
@@ -45,11 +51,13 @@
       position: relative;
       overflow: hidden;
       z-index: 1; /* Keep the image behind */
+
   
       .card-img {
         width: 100% !important;
         height: auto ;
         display: block ;
+        
       }
   
       .card-title {
@@ -59,6 +67,7 @@
         background: #00000099;
         padding: 10px;
         text-align: center;
+       
       }
   
       .card-title-text {
@@ -120,28 +129,32 @@
   }
 
   //yangiliklar
+  .news{
+    background-color: #eef7f9;
+  }
   .news-wrap{
-  background-color: #eef7f9;
-  padding: 60px;
-  border-radius: 8px;
-  
+ 
+    padding-top: 40px !important;
+    padding-bottom: 40px !important;
+    padding: 60px;
   }
   .content-box {
     padding: 16px;
   }
   
   .section-title {
+    margin-left: 65px;
     font-size: 27px;
     font-weight: 600;
     text-align: left;
-    margin-bottom: 16px;
     color: #019acc
   }
   .section-title1 {
-    font-size: 18px;
+    margin-left: 25px;
+    font-size: 20px;
     font-weight: 600;
     text-align: left;
-    margin-bottom: 3px;
+   padding-bottom: 10px !important;
     color: #000000;
   }
   
@@ -268,12 +281,14 @@
     align-items: center;
     font-size: 20px;
     padding-top: 10px;
+    padding-bottom: 0px !important;
+    padding-left: 0px !important;
   }
   h3{
     color: rgb(1, 154, 204);
     display: flex;
     align-items: center;
-    font-size: 30px;
+    font-size: 24px;
     padding-top: 10px;
     padding-bottom: 10px;
   }

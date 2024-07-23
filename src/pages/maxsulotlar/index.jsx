@@ -51,6 +51,30 @@ const productData = [
     image: Smartchannel,
     link: "Batafsil",
   },
+  {
+    title: "Smart Water",
+    description: "Suv sathi va uning sarfini onlayn monitoring qilish qurilmasi",
+    image: Smartwater,
+    link: "Batafsil",
+  },
+  {
+    title: "Smart Well",
+    description: "Quduqlarda suv sho’rlanishini o'lchash va suv sathini hisoblash imkoniyatiga ega.",
+    image: Smartwell,
+    link: "Batafsil",
+  },
+  {
+    title: "Piezometr(Хлопушка)",
+    description: "Qurilma quduqlarda suv sathini o’lchash uchun ishlatiladi.",
+    image: Piezometr,
+    link: "Batafsil",
+  },
+  {
+    title: "Vertushka",
+    description: "Suv oqimi tezligi va sathini o'lchash imkoniyatiga ega.",
+    image: Vertushka,
+    link: "Batafsil",
+  },
 ];
 
 function Index() {
@@ -79,7 +103,7 @@ function Index() {
                     </div>
                     <div className="card-hover-content">
                       <Paragraph className="card-description">{item.description}</Paragraph>
-                      <Button type="primary" className="card-button">
+                      <Button  className="card-button">
                         {item.link}
                       </Button>
                     </div>

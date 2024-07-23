@@ -46,7 +46,7 @@ const Index = () => (
     <Row gutter={[16, 16]} style={{ marginTop: '16px' }}>
       <Col xs={24} md={12}>
         <Card className="contact-form">
-          <h2>Contact Form</h2>
+          
           <ContactForm />
         </Card>
       </Col>
