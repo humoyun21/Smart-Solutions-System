@@ -614,9 +614,9 @@ function Index() {
                 </div>
                 <div className="card-hover-content">
                   <Paragraph className="card-description">{item.description}</Paragraph>
-                  <Button type="primary" className="card-button" style={{ backgroundColor: "#1a8ebc99", color: " #fff" }}>
+                  {/* <Button type="primary" className="card-button" style={{ backgroundColor: "#1a8ebc99", color: " #fff" }}>
                     {item.link}
-                  </Button>
+                  </Button> */}
                 </div>
               </Card>
             </Col>
