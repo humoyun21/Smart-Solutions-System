@@ -1,61 +1,84 @@
 #news-section {
-  .news-container {
-    .news-content-box {
-      .news-section-title {
-        text-align: center;
-        margin-bottom: 20px;
-      }
-      .news-section-subtitle {
-        text-align: center;
-        margin-bottom: 40px;
-      }
-      .news-grid-container {
-        display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-        gap: 16px;
+  padding: 2rem 0;
+  background-color: #f9f9f9;
 
-        .news-card-article {
-          background: #fff;
-          border: 1px solid #ddd;
-          border-radius: 8px;
-          overflow: hidden;
-          transition: transform 0.3s;
+  .news-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+  }
+
+  .news-content-box {
+    text-align: center;
+    margin-bottom: 2rem;
+
+    .news-section-title {
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+      color: #333;
+    }
+
+    .news-section-subtitle {
+      font-size: 1.2rem;
+      color: #777;
+      margin-bottom: 2rem;
+    }
+  }
+
+  .news-grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1.5rem;
+
+    .news-card-article {
+      background: #fff;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s;
+
+      &:hover {
+        transform: translateY(-5px);
+      }
+
+      .news-card-img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+      }
+
+      .news-card-data {
+        padding: 1rem;
+
+        .news-card-title {
+          font-size: 1.5rem;
+          margin: 0.5rem 0;
+          color: #333;
+        }
+
+        .news-card-description {
+          font-size: 1rem;
+          color: #555;
+          margin-bottom: 1rem;
+        }
+
+        .news-card-button {
+          font-size: 1rem;
+          color: #1e90ff;
+          text-decoration: none;
+          font-weight: bold;
 
           &:hover {
-            transform: translateY(-5px);
-          }
-
-          .news-card-img {
-            width: 100%;
-            height: 200px;
-            object-fit: cover;
-          }
-
-          .news-card-data {
-            padding: 16px;
-
-            .news-card-title {
-              font-size: 1.2em;
-              margin-bottom: 8px;
-              text-align: center;
-            }
-
-            .news-card-description {
-              font-size: 1em;
-              margin-bottom: 16px;
-              text-align: center;
-            }
-
-            .news-card-button {
-              color: #007bff;
-              cursor: pointer;
-              text-align: center;
-              &:hover {
-                text-decoration: underline;
-              }
-            }
+            text-decoration: underline;
           }
         }
+      }
+    }
+
+    .news-card-featured {
+      grid-column: span 2;
+      .news-card-img {
+        height: 300px;
       }
     }
   }

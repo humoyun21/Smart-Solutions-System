@@ -77,7 +77,7 @@ const NewsSection = () => {
                 <div className="news-card-data">
                   <h4 className="news-card-title">{item.title}</h4>
                   <p className="news-card-description">{item.description}</p>
-                  <p className="news-card-button">{item.link}</p>
+                  <a className="news-card-button" href="#">{item.link}</a>
                 </div>
               </div>
             ))}

@@ -50,11 +50,19 @@ export default function Index() {
     spaceBetween: 30,
     grabCursor: true,
     pagination: { clickable: true },
-    autoplay: { delay: 3000, disableOnInteraction: false },
+    autoplay: { delay: 2000, disableOnInteraction: false },
     modules: [Pagination, Autoplay],
     loop: true,
   };
-
+  const swiperSettingss = {
+    slidesPerView: 4,
+    spaceBetween: 30,
+    grabCursor: true,
+    pagination: { clickable: true },
+    autoplay: { delay: 2000, disableOnInteraction: false },
+    modules: [Pagination, Autoplay],
+    loop: true,
+  };
   return (
     <>
     
@@ -79,7 +87,7 @@ export default function Index() {
       </Swiper>
 
       <h2 className='parent-text'>Xorijiy Hamkorlar</h2>
-      <Swiper {...swiperSettings} className="foreignPartnerSwiper">
+      <Swiper {...swiperSettingss} className="foreignPartnerSwiper">
         {foreignPartners.map((partner, index) => (
           <SwiperSlide key={index}>
             <Card className="foreignPartnerCard">
