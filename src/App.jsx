@@ -5,6 +5,7 @@ const App = () => {
     <div>
       <Outlet />
     </div>
+    
   );
 };
 

@@ -1,6 +1,6 @@
-import React from "react";
+import React, { useState } from "react";
 import { Container } from "@containers";
-import { Typography, Row, Col, Button, Card } from "antd";
+import { Typography, Row, Col, Button, Card, Modal } from "antd";
 
 import "./style.scss";
 
@@ -51,44 +51,38 @@ const productData = [
     image: Smartchannel,
     link: "Batafsil",
   },
-  {
-    title: "Smart Water",
-    description: "Suv sathi va uning sarfini onlayn monitoring qilish qurilmasi",
-    image: Smartwater,
-    link: "Batafsil",
-  },
-  {
-    title: "Smart Well",
-    description: "Quduqlarda suv sho’rlanishini o'lchash va suv sathini hisoblash imkoniyatiga ega.",
-    image: Smartwell,
-    link: "Batafsil",
-  },
-  {
-    title: "Piezometr(Хлопушка)",
-    description: "Qurilma quduqlarda suv sathini o’lchash uchun ishlatiladi.",
-    image: Piezometr,
-    link: "Batafsil",
-  },
-  {
-    title: "Vertushka",
-    description: "Suv oqimi tezligi va sathini o'lchash imkoniyatiga ega.",
-    image: Vertushka,
-    link: "Batafsil",
-  },
 ];
 
 function Index() {
+  const [isModalVisible, setIsModalVisible] = useState(false);
+  const [modalData, setModalData] = useState({});
+
+  const showModal = (data) => {
+    setModalData(data);
+    setIsModalVisible(true);
+  };
+
+  const handleOk = () => {
+    setIsModalVisible(false);
+  };
+
+  const handleCancel = () => {
+    setIsModalVisible(false);
+  };
+
   return (
     <>
-
-    
       <section id="gratis1">
         <Container>
           <div className="custom-container">
             <Title level={4} className="custom-section-title">
               Mahsulotlar
             </Title>
-            <Title level={4} style={{ fontSize: 28, fontWeight: 600, textAlign: "left",marginBottom: 15, color: "rgb(1, 154, 204)" }} className="custom-section-subtitle">
+            <Title
+              level={4}
+              style={{ fontSize: 28, fontWeight: 600, textAlign: "left", marginBottom: 15, color: "rgb(1, 154, 204)" }}
+              className="custom-section-subtitle"
+            >
               DISCOVER OUR EXPERTISE
             </Title>
             <Row gutter={[16, 16]}>
@@ -105,7 +99,7 @@ function Index() {
                     </div>
                     <div className="card-hover-content">
                       <Paragraph className="card-description">{item.description}</Paragraph>
-                      <Button  className="card-button">
+                      <Button className="card-button" onClick={() => showModal(item)}>
                         {item.link}
                       </Button>
                     </div>
@@ -116,6 +110,33 @@ function Index() {
           </div>
         </Container>
       </section>
+
+      <Modal
+        title={null}
+        visible={isModalVisible}
+        onOk={handleOk}
+        onCancel={handleCancel}
+        width="100%"
+        style={{ top: 30 }}
+        bodyStyle={{ height: '90vh', padding: 0 }}
+        footer={null}
+      >
+        <div className="modal-content">
+          <div className="modal-images">
+            {[...Array(2)].map((_, index) => (
+              <img key={index} className="modal-img" src={modalData.image} alt={modalData.title} />
+            ))}
+          </div>
+          <div className="modal-description">
+            <Title level={3}>{modalData.title}</Title>
+            <Paragraph>
+              {modalData.description}
+              {" "}Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            </Paragraph>
+            <Button type="primary" onClick={handleOk}>Close</Button>
+          </div>
+        </div>
+      </Modal>
     </>
   );
 }
