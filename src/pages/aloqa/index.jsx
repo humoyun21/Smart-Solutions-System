@@ -1,32 +1,81 @@
-import React from 'react';
-import { Row, Col, Card, Form, Input, Button } from 'antd';
-import { EnvironmentOutlined, MailOutlined, PhoneOutlined } from '@ant-design/icons';
-import './style.scss';
+import React from "react";
+import { Row, Col, Card, Form, Input, Button } from "antd";
+import {
+  EnvironmentOutlined,
+  MailOutlined,
+  PhoneOutlined,
+} from "@ant-design/icons";
+import { Box } from "@mui/material";
+import "./style.scss";
 
 const ContactForm = () => (
   <Form layout="vertical">
-    <Form.Item label="Full Name" name="fullname" rules={[{ required: true, message: 'Please enter your full name!' }]}>
+    <Form.Item
+      label="Full Name"
+      name="fullname"
+      rules={[{ required: true, message: "Please enter your full name!" }]}
+    >
       <Input />
     </Form.Item>
-    <Form.Item label="Mobile Number" name="mobile" rules={[{ required: true, message: 'Please enter your mobile number!' }]}>
+    <Form.Item
+      label="Mobile Number"
+      name="mobile"
+      rules={[{ required: true, message: "Please enter your mobile number!" }]}
+    >
       <Input />
     </Form.Item>
-    <Form.Item label="Email Address" name="email" rules={[{ required: true, message: 'Please enter a valid email address!', type: 'email' }]}>
+    <Form.Item
+      label="Email Address"
+      name="email"
+      rules={[
+        {
+          required: true,
+          message: "Please enter a valid email address!",
+          type: "email",
+        },
+      ]}
+    >
       <Input />
     </Form.Item>
     <Form.Item label="Address" name="address">
       <Input.TextArea />
     </Form.Item>
     <Form.Item>
-      <Button type="primary" htmlType="submit">Submit</Button>
+      <Button type="primary" htmlType="submit">
+        Submit
+      </Button>
     </Form.Item>
   </Form>
 );
 
 const Index = () => (
   <div className="contact-page">
-    <h1>Contact Us</h1>
-    <h2> Biz bilan aloqaga chiqish uchun</h2>
+    <Box
+      sx={{
+        fontSize: 18,
+        fontWeight: "bold",
+        marginLeft: 2
+      }}
+      component="h4"
+    >
+      Biz bilan aloqa
+    </Box>
+
+    <Box
+      sx={{
+        marginTop: 2,
+        fontSize: 24,
+        color: "rgb(1, 154, 204)",
+        textTransform: "uppercase",
+        width: 700,
+        marginBottom: 2,
+        marginLeft: 2
+      }}
+      component="h5"
+    >
+      Sizni qiziqtirgan barcha savollar va takliflar bilan murojat qilishingiz
+      mumkin
+    </Box>
     <div className="contact-info">
       <div className="info-block">
         <EnvironmentOutlined className="icon" />
@@ -43,10 +92,9 @@ const Index = () => (
         <p>+041 3434 4343 43</p>
       </div>
     </div>
-    <Row gutter={[16, 16]} style={{ marginTop: '16px' }}>
+    <Row gutter={[16, 16]} style={{ marginTop: "16px" }}>
       <Col xs={24} md={12}>
         <Card className="contact-form">
-          
           <ContactForm />
         </Card>
       </Col>

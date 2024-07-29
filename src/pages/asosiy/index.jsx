@@ -1,22 +1,14 @@
 import React, { useRef } from "react";
-
-
 import Carousel from "react-material-ui-carousel";
-import { Typography, Row, Col, Button, Form, Input, Card } from "antd";
+import { Typography, Row, Col, Button, Card } from "antd";
 import { Paper, Box } from "@mui/material";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { styled } from "@mui/system";
-import { EnvironmentOutlined, MailOutlined, PhoneOutlined } from '@ant-design/icons';
-import CarouselComponent from "../hamkorlar"
-import Contact from "../aloqa"
+import CarouselComponent from "../hamkorlar";
+import Contact from "../aloqa";
 
 //style
 import "./style.scss";
-
-const swiperStyle = {
-  width: "1700px",
-  height: "350px",
-};
 
 // Import Swiper styles
 import "swiper/css";
@@ -64,13 +56,12 @@ import Xorazm from "../../assets/images/xorazm.png";
 import Germanya from "../../assets/images/germanya.png";
 import Tashkent from "../../assets/images/tashkent.png";
 
-
-
-
-
 const { Title, Paragraph } = Typography;
+const swiperStyle = {
+  width: "1700px",
+  height: "350px",
+};
 
-const { Meta } = Card;
 //Mahsulotlar
 const productData = [
   {
@@ -114,6 +105,7 @@ const productData = [
     link: "Batafsil",
   },
 ];
+
 //yangiliklar
 const newsData = [
   {
@@ -234,7 +226,6 @@ const serviceData = [
   },
 ];
 
-
 function Index() {
   const iframeRefs = useRef([]);
 
@@ -248,6 +239,7 @@ function Index() {
       }
     });
   };
+
   //videos
   const videos = [
     {
@@ -281,8 +273,6 @@ function Index() {
       : description;
   };
 
- 
-  
   return (
     // Intro
     <>
@@ -315,7 +305,7 @@ function Index() {
               <Box
                 component="h4"
                 sx={{
-                  fontSize: 20,
+                  fontSize: 40,
                   fontWeight: "bold",
                   color: "rgb(1, 154, 204)",
                   marginBottom: 5,
@@ -327,7 +317,7 @@ function Index() {
               <Box
                 component="h4"
                 sx={{
-                  fontSize: 20,
+                  fontSize: 24,
                   fontWeight: "bold",
                   marginBottom: 4,
                   color: "#333",
@@ -337,7 +327,7 @@ function Index() {
               </Box>
 
               <a
-                to="/"
+                href="/"
                 style={{
                   paddingTop: "5px",
                   paddingBottom: "5px",
@@ -379,8 +369,8 @@ function Index() {
         >
           <Box
             sx={{
-              fontSize: 14,
-              fontWeight: 600,
+              fontSize: 18,
+              fontWeight: "bold",
             }}
             component="h4"
           >
@@ -401,7 +391,7 @@ function Index() {
 
           <Box
             sx={{
-              marginTop: 2,
+              marginTop: 1,
             }}
             component="p"
           >
@@ -410,26 +400,27 @@ function Index() {
             orci viverra elementum. Maecenas vitae malesuada nisi. Aenean
             finibus quam eget est suscipit, et luctus turpis tristique. Cras
             sagittis faucibus maximus. Aliquam erat volutpat. Ut ac sapien ac
-            orci rhoncus iaculis.<br/> <br/>
-          </Box>
-
-          <Box 
-            sx={{
-              marginTop: 2,
-            }}
-            component="p"
-          >
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
-            consequat pharetra sapien bibendum congue. Ut eget nisl sit amet
-            orci viverra elementum. Maecenas vitae malesuada nisi. Aenean
-            finibus quam eget est suscipit, et luctus turpis tristique. Cras
-            sagittis faucibus maximus. Aliquam erat volutpat. Ut ac sapien ac
-            orci rhoncus iaculis. <br/> <br/>
+            orci rhoncus iaculis.
+            <br />
           </Box>
 
           <Box
             sx={{
-              marginTop: 2,
+              marginTop: 1,
+            }}
+            component="p"
+          >
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
+            consequat pharetra sapien bibendum congue. Ut eget nisl sit amet
+            orci viverra elementum. Maecenas vitae malesuada nisi. Aenean
+            finibus quam eget est suscipit, et luctus turpis tristique. Cras
+            sagittis faucibus maximus. Aliquam erat volutpat. Ut ac sapien ac
+            orci rhoncus iaculis. <br />
+          </Box>
+
+          <Box
+            sx={{
+              marginTop: 1,
             }}
             component="p"
           >
@@ -482,7 +473,6 @@ function Index() {
       </Box>
 
       {/* Service */}
-
       <Box
         sx={{
           padding: 4,
@@ -492,7 +482,7 @@ function Index() {
         <Box
           sx={{
             fontSize: 18,
-            fontWeight: 600,
+            fontWeight: "bold",
             textAlign: "left",
             marginLeft: 5,
             marginBottom: 1,
@@ -590,71 +580,87 @@ function Index() {
       </Box>
 
       {/*Product category */}
-
       <section className="product">
-      
-        <Title level={4} style={{ fontSize: 20, fontWeight: 600,  marginLeft: 65 , paddingTop: 40, textAlign: "left",  color: "#444" }}>
-          Mahsulotlar
-        </Title>
-        <Title  level={4} style={{ fontSize: 24, fontWeight: 600, textAlign: "left", marginLeft: 65,color: "rgb(1, 154, 204)" }}>
-        DISCOVER OUR EXPERTISE
-        </Title>
-        <div   className="product-wrap"> 
-        <Row gutter={[16, 26]}>
-          {productData.map((item, index) => (
-            <Col xs={24} sm={12} md={8} key={index}>
-              <Card hoverable className="custom-card">
-                <div className="card-cover">
-                  <img className="card-img" src={item.image} alt={`Feature ${index}`} />
-                  <div className="card-title">
-                    <Title level={4} className="card-title-text" >
-                      {item.title}
-                    </Title>
+        <Box
+          sx={{
+            fontSize: 18,
+            fontWeight: "bold",
+            textAlign: "left",
+            marginLeft: 5,
+            marginBottom: 1,
+            color: "#444",
+          }}
+          component="h4"
+        >
+          Our Products
+        </Box>
+
+        <Box
+          component="h5"
+          sx={{
+            fontSize: 24,
+            marginLeft: 5,
+            marginBottom: 5,
+            textAlign: "left",
+            color: "rgb(1, 154, 204)",
+          }}
+        >
+          DISCOVER OUR EXPERTISE
+        </Box>
+
+        <div className="product-wrap">
+          <Row gutter={[16, 26]}>
+            {productData.map((item, index) => (
+              <Col xs={24} sm={12} md={8} key={index}>
+                <Card hoverable className="custom-card">
+                  <div className="card-cover">
+                    <img
+                      className="card-img"
+                      src={item.image}
+                      alt={`Feature ${index}`}
+                    />
+                    <div className="card-title">
+                      <Title level={4} className="card-title-text">
+                        {item.title}
+                      </Title>
+                    </div>
                   </div>
-                </div>
-                <div className="card-hover-content">
-                  <Paragraph className="card-description">{item.description}</Paragraph>
-                  {/* <Button type="primary" className="card-button" style={{ backgroundColor: "#1a8ebc99", color: " #fff" }}>
+                  <div className="card-hover-content">
+                    <Paragraph className="card-description">
+                      {item.description}
+                    </Paragraph>
+                    {/* <Button type="primary" className="card-button" style={{ backgroundColor: "#1a8ebc99", color: " #fff" }}>
                     {item.link}
                   </Button> */}
-                </div>
-              </Card>
-            </Col>
-          ))}
-        </Row>
+                  </div>
+                </Card>
+              </Col>
+            ))}
+          </Row>
 
-        <div className="products-btn">
-        <button>
-          All products
-        </button>
-      </div>
-      </div>
+          <div className="products-btn">
+            <a href="/">All products</a>
+          </div>
+        </div>
       </section>
 
       {/* News*/}
-      <section className="news" >
-      <h2 className="section-title1">Yangiliklar</h2>
+      <section className="news">
+        <h2 className="section-title1">Yangiliklar</h2>
 
-      <h4 className="section-title">Lorem ipsum dolor.</h4>
-          <div className="news-wrap">
+        <h4 className="section-title">Lorem ipsum dolor.</h4>
+        <div className="news-wrap">
           <div className="content-box">
-            
             <div className="grid-container ">
               {newsData.map((item, index) => (
-
-               
                 <div
-
                   className={`card-article  ${
                     index === 0
                       ? "card-featured"
                       : index === 3
                       ? "card-full-width"
                       : "card-small"
-                  } ${
-                    index %4==0 && 'card-end'
-                  }` 
-                }
+                  } ${index % 4 == 0 && "card-end"}`}
                   key={index}
                 >
                   <img
@@ -680,29 +686,49 @@ function Index() {
             </div>
           </div>
           <div className="products-btn">
-        <button>
-          All News
-        </button>
-   
-        </div>
+            <a href="/">All News</a>
           </div>
-        
+        </div>
       </section>
 
       {/* Video shorts*/}
-        <section >
-       <div className="video-wrap">
-       <div className="video-text">
-            <h2>Videolar</h2>
-            <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. </h3>
-        </div>
+      <section>
+        <div className="video-wrap">
+          <div className="video-text">
+            <Box
+              sx={{
+                fontSize: 18,
+                fontWeight: "bold",
+                ml: 2
+              }}
+              component="h4"
+            >
+              ISH JARAYONIDAGI VIDEO LAVXALAR
+            </Box>
+
+            <Box
+              sx={{
+                marginTop: 2,
+                fontSize: 24,
+                color: "rgb(1, 154, 204)",
+                width: 700,
+                textTransform: 'uppercase',
+                marginBottom: 2,
+                ml: 2
+              }}
+              component="h5"
+
+            >
+              Xalqaro va yurtimiz yangiliklari, ish jarayonlari va haftalik
+              yangiliklarni bilan tanishishingiz mumkin
+            </Box>
+          </div>
           <div id="app">
             <Swiper
               style={swiperStyle}
               autoplay={{
                 delay: 4000,
                 disableOnInteraction: false,
-                
               }}
               effect={"coverflow"}
               grabCursor={true}
@@ -749,27 +775,21 @@ function Index() {
                 </SwiperSlide>
               ))}
             </Swiper>
-            
           </div>
           <div className="products-btn">
-        <button>
-          All video
-        </button>
+            <a href="/">All video</a>
           </div>
-        
-       </div>
-          
-       
+        </div>
       </section>
 
       {/* Contact */}
 
-       <Contact />
+      <Contact />
 
       {/* Partners */}
 
-          <CarouselComponent />
-      </>   
+      <CarouselComponent />
+    </>
   );
 }
 export default Index;
