@@ -64,10 +64,6 @@ import Xorazm from "../../assets/images/xorazm.png";
 import Germanya from "../../assets/images/germanya.png";
 import Tashkent from "../../assets/images/tashkent.png";
 
-
-
-
-
 const { Title, Paragraph } = Typography;
 
 const { Meta } = Card;
