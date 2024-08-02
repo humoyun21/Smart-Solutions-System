@@ -1,96 +1,124 @@
-import React from "react";
-import { Row, Col, Card } from "antd";
+import React, { useState } from "react";
 import "./style.scss";
-import { Container } from "@containers";
-// images
-import avtomat from "../../assets/images/avtomat.jpg";
-import melirotsiya from "../../assets/images/melirotsiya.jpg";
-import quyoshpanellari from "../../assets/images/quyoshpanellari.jpeg";
-import standart from "../../assets/images/standart.jpg";
-import suvolchash from "../../assets/images/suvolchash.jpg";
 import suvombor from "../../assets/images/suvombor.png";
 
-
-const { Meta } = Card;
+import suvombor1 from "../../assets/images/suvombor.png";
+import avtomat from "../../assets/images/avtomat.jpg";
+import melirotsiya from "../../assets/images/melirotsiya.jpg";
+import standart from "../../assets/images/standart.jpg";
+import quyoshpanellari from "../../assets/images/quyoshpanellari.jpeg";
+import suvolchash from "../../assets/images/suvolchash.jpg";
 
 function Index() {
-  const cardData = [
-    { img: avtomat, title: "Avtomat", description: "This is a description for Avtomat." },
-    { img: melirotsiya, title: "Melirotsiya", description: "This is a description for Melirotsiya." },
-    { img: quyoshpanellari, title: "Quyosh Panellari", description: "This is a description for Quyosh Panellari." },
-    { img: standart, title: "Standart", description: "This is a description for Standart." },
-    { img: suvolchash, title: "Suvolchash", description: "This is a description for Suvolchash." },
-    { img: suvombor, title: "Suvombor", description: "This is a description for Suvombor." },
+  const content = {
+    title: "To'liq xizmatlar to'plami",
+    description: `Buyurtmachi bilan ishimiz uskuna narxini batafsil hisoblash uchun dastlabki ma'lumotlarni yig'ishdan boshlanadi. 
+      Agar kerak bo'lsa, bizning mutaxassislarimiz saytga borib, kerakli tekshiruvni o'tkazishlari va barcha o'lchovlarni olishlari mumkin. 
+      Keyinchalik, bizning mutaxassislarimiz Buyurtmachining dizaynerlari bilan birgalikda tuzilmalarni avtomatlashtirilgan monitoringi maqsadlarini aniqlaydilar. Qanday parametrlarni kuzatish kerak, qanday chastota bilan va hokazo. 
+      Dastlabki ishlar natijalariga ko'ra, biz tizimning tarkibi, jihozlarning miqdori va texnik tavsiflari, `,
+  };
+
+  const [selectedCard, setSelectedCard] = useState({
+    title: "",
+    description: "",
+    imgSrc: "",
+  });
+
+  const cardsData = [
+    {
+      title: "Avtomat",
+      description: "Buyurtmachi bilan ishimiz uskuna narxini batafsil hisoblash uchun dastlabki ma'lumotlarni yig'ishdan boshlanadi. Agar kerak bo'lsa, bizning mutaxassislarimiz saytga borib, kerakli tekshiruvni o'tkazishlari va barcha o'lchovlarni olishlari mumkin. Keyinchalik, bizning mutaxassislarimiz Buyurtmachining dizaynerlari bilan birgalikda tuzilmalarni avtomatlashtirilgan monitoringi maqsadlarini aniqlaydilar. Qanday parametrlarni kuzatish kerak, qanday chastota bilan va hokazo. Dastlabki ishlar natijalariga ko'ra, biz tizimning tarkibi, jihozlarning miqdori va texnik tavsiflari,",
+      imgSrc: avtomat,
+    },
+    {
+      title: "Suvombor",
+      description: "Buyurtmachi bilan ishimiz uskuna narxini batafsil hisoblash uchun dastlabki ma'lumotlarni yig'ishdan boshlanadi. Agar kerak bo'lsa, bizning mutaxassislarimiz saytga borib, kerakli tekshiruvni o'tkazishlari va barcha o'lchovlarni olishlari mumkin. Keyinchalik, bizning mutaxassislarimiz Buyurtmachining dizaynerlari bilan birgalikda tuzilmalarni avtomatlashtirilgan monitoringi maqsadlarini aniqlaydilar. Qanday parametrlarni kuzatish kerak, qanday chastota bilan va hokazo. Dastlabki ishlar natijalariga ko'ra, biz tizimning tarkibi, jihozlarning miqdori va texnik tavsiflari,",
+      imgSrc: suvombor1,
+    },
+    {
+      title: "Melirotsiya",
+      description: "Buyurtmachi bilan ishimiz uskuna narxini batafsil hisoblash uchun dastlabki ma'lumotlarni yig'ishdan boshlanadi. Agar kerak bo'lsa, bizning mutaxassislarimiz saytga borib, kerakli tekshiruvni o'tkazishlari va barcha o'lchovlarni olishlari mumkin. Keyinchalik, bizning mutaxassislarimiz Buyurtmachining dizaynerlari bilan birgalikda tuzilmalarni avtomatlashtirilgan monitoringi maqsadlarini aniqlaydilar. Qanday parametrlarni kuzatish kerak, qanday chastota bilan va hokazo. Dastlabki ishlar natijalariga ko'ra, biz tizimning tarkibi, jihozlarning miqdori va texnik tavsiflari,",
+      imgSrc: melirotsiya,
+    },
+    {
+      title: "Standart",
+      description: "Buyurtmachi bilan ishimiz uskuna narxini batafsil hisoblash uchun dastlabki ma'lumotlarni yig'ishdan boshlanadi. Agar kerak bo'lsa, bizning mutaxassislarimiz saytga borib, kerakli tekshiruvni o'tkazishlari va barcha o'lchovlarni olishlari mumkin. Keyinchalik, bizning mutaxassislarimiz Buyurtmachining dizaynerlari bilan birgalikda tuzilmalarni avtomatlashtirilgan monitoringi maqsadlarini aniqlaydilar. Qanday parametrlarni kuzatish kerak, qanday chastota bilan va hokazo. Dastlabki ishlar natijalariga ko'ra, biz tizimning tarkibi, jihozlarning miqdori va texnik tavsiflari,",
+      imgSrc: standart,
+    },
+    {
+      title: "Quyosh Panellari",
+      description: "Buyurtmachi bilan ishimiz uskuna narxini batafsil hisoblash uchun dastlabki ma'lumotlarni yig'ishdan boshlanadi. Agar kerak bo'lsa, bizning mutaxassislarimiz saytga borib, kerakli tekshiruvni o'tkazishlari va barcha o'lchovlarni olishlari mumkin. Keyinchalik, bizning mutaxassislarimiz Buyurtmachining dizaynerlari bilan birgalikda tuzilmalarni avtomatlashtirilgan monitoringi maqsadlarini aniqlaydilar. Qanday parametrlarni kuzatish kerak, qanday chastota bilan va hokazo. Dastlabki ishlar natijalariga ko'ra, biz tizimning tarkibi, jihozlarning miqdori va texnik tavsiflari,",
+      imgSrc: quyoshpanellari,
+    },
+    {
+      title: "Suv O'lchash",
+      description: "Buyurtmachi bilan ishimiz uskuna narxini batafsil hisoblash uchun dastlabki ma'lumotlarni yig'ishdan boshlanadi. Agar kerak bo'lsa, bizning mutaxassislarimiz saytga borib, kerakli tekshiruvni o'tkazishlari va barcha o'lchovlarni olishlari mumkin. Keyinchalik, bizning mutaxassislarimiz Buyurtmachining dizaynerlari bilan birgalikda tuzilmalarni avtomatlashtirilgan monitoringi maqsadlarini aniqlaydilar. Qanday parametrlarni kuzatish kerak, qanday chastota bilan va hokazo. Dastlabki ishlar natijalariga ko'ra, biz tizimning tarkibi, jihozlarning miqdori va texnik tavsiflari,",
+      imgSrc: suvolchash,
+    },
   ];
 
+  const handleCardClick = (title, description, imgSrc) => {
+    setSelectedCard({ title, description, imgSrc });
+  };
+
+  const truncateText = (text, maxLength) => {
+    if (text.length > maxLength) {
+      return text.slice(0, maxLength) + "...";
+    }
+    return text;
+  };
+
   return (
+    <>
+     <div className="intro">
+  <div className="intro-text">
+    <h2>Introduction Title</h2>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam tempore laudantium ab optio vitae numquam, odit quas. Nam, nemo numquam!
+    </p>
 
-<>
-<Container>
-  
-<Row gutter={24}>
-      <Col span={24}>
-        <Card className="custom-card1">
-          <div className="card-body">
-            <div className="service-photo">
-              <img src={suvombor} alt="Service" />
-            </div>
-            <div className="service-text">
-              <h1>Lorem ipsum dolor sit amet</h1>
-              <h2>
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consequuntur magnam ut architecto doloremque reiciendis perferendis maxime sed, similique aliquam, sint rerum expedita consequatur totam, veniam ipsam quam ducimus inventore at! Obcaecati harum impedit iure temporibus eum aliquid nihil ducimus tempora.12 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit enim atque et necessitatibus iusto exercitationem numquam ab nobis tempora placeat eaque, sint error vel quaerat a eius molestias aspernatur velit.
-              </h2>
-            </div>
-          </div>
-        </Card>
-      </Col>
-    </Row>
+    <button>
+      Read more
+    </button>
+  </div>
+  <div className="intro-image">
+    <img src={suvombor} alt="Introduction Image" />
+  </div>
+      </div>
 
-</Container>
+      <div className="service">
+        <div className="service-title">
+          <p>{selectedCard.title || content.title}</p>
+          <img src={selectedCard.imgSrc || suvombor} alt="" />
+        </div>
 
-
-
-{/* <Container> */}
-
-
-<div className="container">
-
-<h1 className="xizmatlar">Xizamtlar :</h1>
-<div className="cardswrap">
-<Row gutter={[36, 16]}>
-  {cardData.map((card, index) => (
-    <Col
-      xs={24} sm={24} md={12} lg={12}
-      key={index}
-      className={`card-row ${Math.floor(index / 2) % 2 === 0 ? 'left-image' : 'right-image'}`}
-    >
-      <Card className="custom-card">
-        <div className="card-body">
-          <img alt={card.title} src={card.img} className="card-image" />
-          <div className="card-content">
-            <h3>{card.title}</h3>
-            {/* <p>{card.description}</p> */}
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Excepturi dolor voluptatibus, nulla consequatur nemo quo maiores rem nesciunt commodi vero natus eaque necessitatibus  </p>
+        <div className="service-description">
+          <img src={selectedCard.imgSrc || suvombor} alt="" />
+          <div>
+            <h3>{selectedCard.title || content.title}</h3>
+            <h2>{selectedCard.description || content.description}</h2>
           </div>
         </div>
-      </Card>
-    </Col>
-  ))}
-</Row>
-</div>
+      </div>
 
-
-
-</div>
-
-
-
-{/* </Container> */}
-  
-
-</>
-    
-    
+      <div className="cards">
+        {cardsData.map((card, i) => (
+          <div
+            key={i}
+            className="cards-wrap"
+            onClick={() =>
+              handleCardClick(card.title, card.description, card.imgSrc)
+            }
+          >
+            <img src={card.imgSrc} alt={card.title} />
+            <div>
+              <h2>{card.title}</h2>
+              <p>{truncateText(card.description, 100)}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </>
   );
 }
 

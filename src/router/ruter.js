@@ -23,6 +23,10 @@ const navList = [
         path:"/aloqa"  ,
         title:"Aloqa",
     },
+    {
+        path:"/videos"  ,
+        title:"videos",
+    },
 
 ]
 

@@ -1,119 +1,194 @@
-.custom-card1 {
-    margin-top: 40px;
-    margin-bottom: 40px;
-    border: none;
-    border-radius: 15px;
-    overflow: hidden;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: box-shadow 0.3s ease;
-  
-    &:hover {
-      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-    }
-  
-    .card-body {
-      display: flex;
-      align-items: center;
-  
-      .service-photo {
-        flex: 1;
-        margin-right: 20px;
-  
-        img {
-          width: 100%;
-          height: 100%;
-          object-fit: cover;
-          border-radius: 10px;
-          
-        }
-      }
-  
-      .service-text {
-        flex: 1;
-  
-        h1{
-
-            font-size: 25px;
-    color: rgb(1, 154, 204);
-        }
-        h2 {
-          
-          line-height: 1.6;
-          color: #333;
-          margin: 0;
-          font-weight: 500;
-          text-align: justify;
-          text-justify: inter-word;
-        }
-      }
-    }
-  }
-  
-  
-.xizmatlar{
-    margin-bottom: 40px;
-    font-size: 25px;
-    color: rgb(1, 154, 204);
-    font-weight: bold
-    
-}
-.cardswrap{
-
-    padding-bottom: 70px;
-}
-.custom-card {
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-  
-    &:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-    }
-  
-    .card-body {
-      display: flex;
-      align-items: center;
-      transition: flex-direction 0.3s ease;
-    }
-  
-    .card-image {
+.intro {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    padding-bottom: 40px;
+  background-color: #eeecec;
+    .intro-text {
+        padding-left: 30px;
       width: 50%;
-      height: 200px;
-      object-fit: cover;
-      border-radius: 10px;
-      transition: transform 0.3s ease;
-    }
+      padding-right: 20px;
   
-    .card-content {
-      align-items: start !important;
-      flex: 1;
-  
-      h3 {
+      h2 {
+        padding-left: 0px;
+        font-weight: bold;
+        color: #019acc;
+        font-size: 25px;
         margin-bottom: 10px;
-        font-size: 1.4rem;
-        color: #333;
-        transition: color 0.3s ease;
-        text-align: center; /* Title-ni markazda hizalash */
       }
   
       p {
-        padding-left: 10px;
-        margin-bottom: 8px;
-        color: #666;
+        width: 600px;
+        font-weight:bold;
+        font-size: 20px;
         line-height: 1.5;
-        text-align: left; /* Matnni chap tomonda hizalash */
+        color: #3e3d3d;
       }
+     
+      button {
+        margin-top: 20px;
+        background-color: #eeecec; /* White background for a clean look */
+        color: #007bff; /* Text color */
+        border: 2px solid #007bff; /* Colorful border */
+        border-radius: 5px; /* Rounded corners */
+        padding: 5px 20px; /* Padding for button size */
+        font-size: 16px; /* Text size */
+        cursor: pointer; /* Pointer cursor on hover */
+        transition: background-color 0.3s, color 0.3s, border-color 0.3s, transform 0.3s; /* Smooth transitions for effects */
+      
+        &:hover {
+          
+          color: #22aaff; /* Text color on hover */
+          border-color: #0056b3; /* Darker border color on hover */
+          transform: scale(1.05); /* Slightly scale up the button on hover */
+        }
+      
+        &:focus {
+          outline: none; /* Remove default focus outline */
+        }
+      }
+      
+    }
   
-      .custom-card:hover h3 {
-        color: #1890ff;
+    .intro-image {
+      width: 50%;
+      text-align: right;
+  
+      img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 10px;
       }
     }
   }
   
-  .card-row.left-image .card-body {
-    flex-direction: row; /* Image on the left, text on the right */
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .intro {
+      flex-direction: column;
+      text-align: center;
+  
+      .intro-text,
+      .intro-image {
+        width: 100%;
+        padding: 0;
+      }
+  
+      .intro-image {
+        margin-top: 20px;
+        text-align: center;
+      }
+    }
   }
   
-  .card-row.right-image .card-body {
-    flex-direction: row-reverse; /* Image on the right, text on the left */
-  }
+
+.service{
+    background-color: #e6f0f4;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    margin-bottom: 0px;
+
+    &-title{
+        
+        display: block;
+        p{
+            
+            font-size: 20px;
+            margin-top: 110px;
+            padding-top: 40px;
+            padding-bottom: 20px;
+            color: rgb(1, 154, 204);
+            font-weight:inherit;
+            
+        }
+        img{
+          border-radius: 5px;
+            width: 300px;
+            height: 400px;
+            // margin-top: 00px;
+        }
+       
+    }
+
+    &-description{
+
+        display: flex;
+        img{
+          border-radius: 5px;
+            width: 400px;
+            height: 600px;
+        }
+        h2{
+            color:rgb(45, 45, 45);
+            width: 450px;
+        }
+        h3{    color: rgb(1, 154, 204);
+            font-weight:inherit;
+            margin-top: 40px;
+            font-size: 20px;
+            padding-top: 40px;
+            padding-left: 40px;
+        }
+    }
+
+}
+
+
+.cards {
+    background-color: #e0ecf0;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+   
   
+    &-wrap {
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      max-width: 300px;
+      text-align: center;
+  
+      &:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  
+        img {
+          transform: scale(1.1);
+        }
+      }
+  
+      img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+        transition: transform 0.3s ease;
+      }
+  
+      div {
+        padding: 20px;
+  
+        h2 {
+            padding: 0px;
+          font-size: 18px;
+          color: #019acc;
+          margin-bottom: 10px;
+        }
+  
+        p {
+          font-size: 14px;
+          color: #666;
+          line-height: 1.5;
+        }
+      }
+    }
+  }

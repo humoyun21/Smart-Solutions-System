@@ -21,6 +21,8 @@ const Index = () => {
                 <Route path="maxsulotlar" element={<Maxsulotlar />} />
                 <Route path="loyihalar" element={<Loyihalar />} />
                 <Route path="yangiliklar" element={<Yangiliklar />} />
+                
+
             </Route>  
           </Route>
         )

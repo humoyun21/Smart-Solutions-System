@@ -9,6 +9,7 @@ import { styled } from "@mui/system";
 import { EnvironmentOutlined, MailOutlined, PhoneOutlined } from '@ant-design/icons';
 import CarouselComponent from "../hamkorlar"
 import Contact from "../aloqa"
+import { useNavigate } from "react-router-dom";
 
 //style
 import "./style.scss";
@@ -231,6 +232,10 @@ const serviceData = [
 ];
 
 
+////
+
+
+
 function Index() {
   const iframeRefs = useRef([]);
 
@@ -276,6 +281,18 @@ function Index() {
       ? description.substring(0, length) + "..."
       : description;
   };
+
+
+  const navigate = useNavigate();
+  const handleClick1 = () => {
+    navigate("../xizmatlar"); // '/boshqa-xizmatlar' URL-ni mos ravishda o'zgartiring
+  };
+  const handleButtonClick = () => {
+    navigate("../videos"); // Replace '/videos' with your actual videos route
+  };
+  
+  
+
 
  
   
@@ -576,6 +593,7 @@ function Index() {
                   sx={{
                     color: "rgb(1, 154, 204)",
                   }}
+                  onClick={handleClick1 }
                 >
                   Use Now
                 </Button>
@@ -748,9 +766,9 @@ function Index() {
             
           </div>
           <div className="products-btn">
-        <button>
-          All video
-        </button>
+          <button onClick={handleButtonClick}>
+      All video
+    </button>
           </div>
         
        </div>
