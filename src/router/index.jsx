@@ -6,7 +6,8 @@ import {
   } from "react-router-dom";
 
 import App from "../App";
-import {Asosiy , Xizmatlar , Malumotlar , Aloqa , Maxsulotlar , Loyihalar , Yangiliklar} from "@pages"
+import {Asosiy , Xizmatlar , Malumotlar , Aloqa , Maxsulotlar , Loyihalar , Yangiliklar , Videolar} from "@pages"
+
 import { MainLayut } from "../layout"
 
 const Index = () => {
@@ -21,6 +22,7 @@ const Index = () => {
                 <Route path="maxsulotlar" element={<Maxsulotlar />} />
                 <Route path="loyihalar" element={<Loyihalar />} />
                 <Route path="yangiliklar" element={<Yangiliklar />} />
+                <Route path="videolar" element={<Videolar />} />
                 
 
             </Route>  

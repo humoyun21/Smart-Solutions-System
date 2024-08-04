@@ -6,10 +6,10 @@ import { Typography, Row, Col, Button, Form, Input, Card } from "antd";
 import { Paper, Box } from "@mui/material";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { styled } from "@mui/system";
-import { EnvironmentOutlined, MailOutlined, PhoneOutlined } from '@ant-design/icons';
 import CarouselComponent from "../hamkorlar"
 import Contact from "../aloqa"
 import { useNavigate } from "react-router-dom";
+import { Link } from 'react-router-dom';
 
 //style
 import "./style.scss";
@@ -287,9 +287,7 @@ function Index() {
   const handleClick1 = () => {
     navigate("../xizmatlar"); // '/boshqa-xizmatlar' URL-ni mos ravishda o'zgartiring
   };
-  const handleButtonClick = () => {
-    navigate("../videos"); // Replace '/videos' with your actual videos route
-  };
+ 
   
   
 
@@ -766,9 +764,9 @@ function Index() {
             
           </div>
           <div className="products-btn">
-          <button onClick={handleButtonClick}>
-      All video
-    </button>
+          <Link to="/videolar">
+        <button>All Videos</button>
+             </Link>
           </div>
         
        </div>
