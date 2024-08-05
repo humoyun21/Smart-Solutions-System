@@ -9,6 +9,14 @@ import standart from "../../assets/images/standart.jpg";
 import quyoshpanellari from "../../assets/images/quyoshpanellari.jpeg";
 import suvolchash from "../../assets/images/suvolchash.jpg";
 
+
+import Service1 from "../../assets/images/service1.png";
+import Service2 from "../../assets/images/service2.png";
+import Service3 from "../../assets/images/service3.png";
+import Service4 from "../../assets/images/service4.png";
+import Service5 from "../../assets/images/service5.png";
+import Service6 from "../../assets/images/service6.png";
+
 function Index() {
   const content = {
     title: "To'liq xizmatlar to'plami",
@@ -68,6 +76,27 @@ function Index() {
     return text;
   };
 
+
+  const cardData = [
+    {
+      imgSrc: suvombor,
+      title: "Loyihani qo'llab-quvvatlash va barcha bosqichlarni bitta tashkilot tomonidan nazorat qilish",
+    },
+    {
+      imgSrc: suvombor,
+      title: "Loyihani qo'llab-quvvatlash va barcha bosqichlarni bitta tashkilot tomonidan nazorat qilish",
+    },
+    {
+      imgSrc: suvombor,
+      title: "Loyihani qo'llab-quvvatlash va barcha bosqichlarni bitta tashkilot tomonidan nazorat qilish",
+    },
+    {
+      imgSrc: suvombor,
+      title: "Loyihani qo'llab-quvvatlash va barcha bosqichlarni bitta tashkilot tomonidan nazorat qilish",
+    },
+    // Add more objects as needed
+  ];
+  
   return (
     <>
      <div className="intro">
@@ -101,23 +130,52 @@ function Index() {
         </div>
       </div>
 
-      <div className="cards">
-        {cardsData.map((card, i) => (
-          <div
-            key={i}
-            className="cards-wrap"
-            onClick={() =>
-              handleCardClick(card.title, card.description, card.imgSrc)
-            }
-          >
+      <div className="about">
+      <div className=" container">
+      <h1>Nega biz bilan ishlashingiz kerak?</h1>
+      <p>
+        Sensors One bino va inshootlarning konstruksiyalarini, ham qurilayotgan,
+        ham mavjud tuzilmalarni monitoring qilish uchun avtomatlashtirilgan
+        tizimlarni jihozlash bo'yicha xizmatlarning to'liq spektrini taklif
+        etadi. Avtomatlashtirilgan kalit taslim tuzilmalarni monitoring qilish
+        tizimlariga buyurtma berishning afzalliklari:
+      </p>
+      <div className="about-card-grid">
+        {cardData.map((card, index) => (
+          <div key={index} className="about-card-wrap">
             <img src={card.imgSrc} alt={card.title} />
-            <div>
-              <h2>{card.title}</h2>
-              <p>{truncateText(card.description, 100)}</p>
-            </div>
+            <h2>{card.title}</h2>
           </div>
         ))}
       </div>
+    </div>
+
+      </div>
+
+      
+      
+
+      <div className="cards">
+  {cardsData.map((card, i) => (
+    <div
+      key={i}
+      className="cards-wrap"
+      onClick={() =>
+        handleCardClick(card.title, card.description, card.imgSrc)
+      }
+    >
+      <div className="card-content">
+        <h2>{card.title}</h2>
+        <p>{truncateText(card.description, 100)}</p>
+      </div>
+      <img src={card.imgSrc} alt={card.title} />
+    </div>
+  ))}
+</div>
+
+
+
+
     </>
   );
 }
