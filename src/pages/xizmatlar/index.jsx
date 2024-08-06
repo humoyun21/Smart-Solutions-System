@@ -10,13 +10,6 @@ import quyoshpanellari from "../../assets/images/quyoshpanellari.jpeg";
 import suvolchash from "../../assets/images/suvolchash.jpg";
 
 
-import Service1 from "../../assets/images/service1.png";
-import Service2 from "../../assets/images/service2.png";
-import Service3 from "../../assets/images/service3.png";
-import Service4 from "../../assets/images/service4.png";
-import Service5 from "../../assets/images/service5.png";
-import Service6 from "../../assets/images/service6.png";
-
 function Index() {
   const content = {
     title: "To'liq xizmatlar to'plami",
@@ -83,15 +76,15 @@ function Index() {
       title: "Loyihani qo'llab-quvvatlash va barcha bosqichlarni bitta tashkilot tomonidan nazorat qilish",
     },
     {
-      imgSrc: suvombor,
+      imgSrc: melirotsiya,
       title: "Loyihani qo'llab-quvvatlash va barcha bosqichlarni bitta tashkilot tomonidan nazorat qilish",
     },
     {
-      imgSrc: suvombor,
+      imgSrc: quyoshpanellari,
       title: "Loyihani qo'llab-quvvatlash va barcha bosqichlarni bitta tashkilot tomonidan nazorat qilish",
     },
     {
-      imgSrc: suvombor,
+      imgSrc: suvolchash,
       title: "Loyihani qo'llab-quvvatlash va barcha bosqichlarni bitta tashkilot tomonidan nazorat qilish",
     },
     // Add more objects as needed
@@ -171,7 +164,7 @@ function Index() {
       <img src={card.imgSrc} alt={card.title} />
     </div>
   ))}
-</div>
+      </div>
 
 
 
