@@ -70,25 +70,7 @@ function Index() {
   };
 
 
-  const cardData = [
-    {
-      imgSrc: suvombor,
-      title: "Loyihani qo'llab-quvvatlash va barcha bosqichlarni bitta tashkilot tomonidan nazorat qilish",
-    },
-    {
-      imgSrc: melirotsiya,
-      title: "Loyihani qo'llab-quvvatlash va barcha bosqichlarni bitta tashkilot tomonidan nazorat qilish",
-    },
-    {
-      imgSrc: quyoshpanellari,
-      title: "Loyihani qo'llab-quvvatlash va barcha bosqichlarni bitta tashkilot tomonidan nazorat qilish",
-    },
-    {
-      imgSrc: suvolchash,
-      title: "Loyihani qo'llab-quvvatlash va barcha bosqichlarni bitta tashkilot tomonidan nazorat qilish",
-    },
-    // Add more objects as needed
-  ];
+  
   
   return (
     <>
@@ -124,26 +106,53 @@ function Index() {
       </div>
 
       <div className="about">
-      <div className=" container">
-      <h1>Nega biz bilan ishlashingiz kerak?</h1>
-      <p>
-        Sensors One bino va inshootlarning konstruksiyalarini, ham qurilayotgan,
-        ham mavjud tuzilmalarni monitoring qilish uchun avtomatlashtirilgan
-        tizimlarni jihozlash bo'yicha xizmatlarning to'liq spektrini taklif
-        etadi. Avtomatlashtirilgan kalit taslim tuzilmalarni monitoring qilish
-        tizimlariga buyurtma berishning afzalliklari:
-      </p>
-      <div className="about-card-grid">
-        {cardData.map((card, index) => (
-          <div key={index} className="about-card-wrap">
-            <img src={card.imgSrc} alt={card.title} />
-            <h2>{card.title}</h2>
-          </div>
-        ))}
+  <div className="container">
+    <h1>Nega biz bilan ishlashingiz kerak?</h1>
+    <p>
+      Sensors One bino va inshootlarning konstruksiyalarini, ham qurilayotgan,
+      ham mavjud tuzilmalarni monitoring qilish uchun avtomatlashtirilgan
+      tizimlarni jihozlash bo'yicha xizmatlarning to'liq spektrini taklif
+      etadi. Avtomatlashtirilgan kalit taslim tuzilmalarni monitoring qilish
+      tizimlariga buyurtma berishning afzalliklari:
+    </p>
+    <div className="about-card-grid">
+    
+      <div className="about-card-grid-wrap">
+        <img src={suvombor} alt="" />
+        <div>
+      <h3>To'liq xizmatlar to'plami</h3>
+        <h2>Sensors One bino va inshootlarning konstruksiyalarini, ham qurilayotgan,
+      ham mavjud tuzilmalarni monitoring qilish uchun avtomatlashtirilgan
+      tizimlarni jihozlash bo'yicha xizmatlarning to'liq spektrini taklif
+      etadi. Avtomatlashtirilgan kalit taslim tuzilmalarni monitoring qilish
+      tizimlariga buyurtma berishning afzalliklari:Sensors One bino va inshootlarning konstruksiyalarini, ham qurilayotgan,
+      ham mavjud tuzilmalarni monitoring qilish uchun avtomatlashtirilgan
+      tizimlarni jihozlash bo'yicha xizmatlarning to'liq spektrini taklif
+      etadi. Avtomatlashtirilgan kalit taslim tuzilmalarni monitoring qilish
+      tizimlariga buyurtma berishning afzalliklari:</h2>
       </div>
+      </div>
+      <div className="about-card-grid-wrap">
+      <img src={melirotsiya} alt="" />
+      <div>
+      <h3>To'liq xizmatlar to'plami</h3>
+        <h2>Sensors One bino va inshootlarning konstruksiyalarini, ham qurilayotgan,
+      ham mavjud tuzilmalarni monitoring qilish uchun avtomatlashtirilgan
+      tizimlarni jihozlash bo'yicha xizmatlarning to'liq spektrini taklif
+      etadi. Avtomatlashtirilgan kalit taslim tuzilmalarni monitoring qilish
+      tizimlariga buyurtma berishning afzalliklari:Sensors One bino va inshootlarning konstruksiyalarini, ham qurilayotgan,
+      ham mavjud tuzilmalarni monitoring qilish uchun avtomatlashtirilgan
+      tizimlarni jihozlash bo'yicha xizmatlarning to'liq spektrini taklif
+      etadi. Avtomatlashtirilgan kalit taslim tuzilmalarni monitoring qilish
+      tizimlariga buyurtma berishning afzalliklari:</h2>
+      </div>
+     
+      
+      </div>
+      
     </div>
-
-      </div>
+  </div>
+</div>
 
       
       

@@ -138,7 +138,7 @@
 
 }
 .about {
-background-color: #f1fafd;
+background-color: #ffffff;
   margin: 0 auto;
   padding: 40px 20px;
   text-align: center;
@@ -157,33 +157,62 @@ background-color: #f1fafd;
   }
 
   &-card-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr); // Two cards per row
-    gap: 20px;
+    display: block; 
+    margin: 0 auto;
+    max-width: 1200px; 
+   
+  
+    &-wrap {
+      display: flex;
+      align-items: center; 
+      margin-bottom: 40px;
+      background: #f9f9f9; 
+      border-radius: 8px; 
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+      overflow: hidden;
+     
+  
+      img {
+        width: 600px;
+        height: 350px;
+        object-fit: cover; 
+        border-radius: 5px; 
+        
+      }
+  h3{
+    margin-top: 0px;
+    padding-left: 40px;
+    text-align : left;
+    color: #019acc;
+    font-size: 24px;
     margin-bottom: 0px;
 
-    @media (max-width: 768px) {
-      grid-template-columns: 1fr; // One card per row on smaller screens
+  }
+      h2 {
+        text-align : left;
+        display: block;
+        justify-content: flex-start;
+        align-items: flex-start;
+        width: 600px;
+        font-size: 16px;
+        color: #333;
+        margin: 0; 
+        padding-bottom: 0px;
+        padding-top: 10px;
+      }
+    }
+  
+    &-wrap:nth-child(2) {
+      flex-direction: row-reverse; 
+      
+      img {
+        margin-right: 0;
+        margin-left: 20px; /* Matn va rasm orasidagi bo'shliq o'ng tomonga ko'chirildi */
+      }
     }
   }
 
-  &-card-wrap {
-    overflow: hidden;
-    transition: transform 0.3s;
 
-    img {
-      border-radius: 5px;
-      width: 100%;
-      height: 60%;
-    }
-
-    h2 {
-
-      font-size: 1.25rem;
-      margin-top: 15px;
-      color: #333;
-    }
-  }
 }
 
 
