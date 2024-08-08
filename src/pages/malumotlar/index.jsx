@@ -100,8 +100,6 @@ const teamMembers = [
     }
   },
 
-  
-  // Boshqa a'zolarni ham qo'shish mumkin...
 ];
 
 function Index() {
@@ -120,7 +118,7 @@ function Index() {
           </div>
           <div className="company-video">
             <video controls width="100%">
-              <source src="path-to-your-video.mp4" type="video/mp4" />
+              <source src="path-to-your-video.mp4" controls="false" />
               Sizning brauzeringiz ushbu videoni qo'llab-quvvatlamaydi.
             </video>
           </div>
