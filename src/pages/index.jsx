@@ -6,6 +6,16 @@ import Malumotlar from "./malumotlar";
 import Yangiliklar from "./yangiliklar";
 import Aloqa from "./aloqa";
 import Videolar from "./videolar";
+import ProductInfo from "./maxsulotlarInfo";
 
-
-export {Asosiy,Maxsulotlar, Malumotlar, Xizmatlar, Loyihalar, Yangiliklar , Aloqa , Videolar}
+export {
+  Asosiy,
+  Maxsulotlar,
+  Malumotlar,
+  Xizmatlar,
+  Loyihalar,
+  Yangiliklar,
+  Aloqa,
+  Videolar,
+  ProductInfo,
+};

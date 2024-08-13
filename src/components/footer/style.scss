@@ -1,8 +1,7 @@
 .footer {
-    padding: 40px 0;
-    background: #eef4f5;
+    padding: 20px 40px 60px 40px;
+    background: #eef4f5df;
     color: #333;
-    padding: 40px;
 
     .wrap {
         margin-bottom: 40px;
@@ -23,7 +22,7 @@
 
             h2 {
               
-                color: #25b7f6;
+                color: #2545c4;
                 font-size: 15px;
                 margin-bottom: 10px;
             }
@@ -34,6 +33,8 @@
                 color: #182b75;
                 font-size: 30px;
                 margin-bottom: 20px;
+                text-align: left;
+                font-weight: bold;
             }
 
             form {
@@ -88,8 +89,7 @@
         margin-top: 40px;
 
        
-        .info-about, .info-jobs, .info-privacy, .info-contact {
-            text-align: center;
+        .info-about  {
 
 
             h2{
@@ -101,7 +101,6 @@
            h3 {
             font-size: 17px;
             color: #4c4d51;
-                margin-bottom: 10px;
             }
 
             p {
@@ -110,9 +109,24 @@
                 color: #6d6d6d;
                 margin: 0;
                 margin-bottom: 10px;
+                text-align: left;
+                font-size: 14px;
             }
-            p:hover{
-                color: #2386f7;
+        }
+        .info-jobs, .info-privacy, .info-contact {
+            text-align: center; 
+            h3 {
+             font-size: 17px;
+             color: #4c4d51;
+             margin-bottom: 8px;
+             }
+             p {
+            
+                cursor: pointer;
+                color: #6d6d6d;
+                margin: 0;
+                margin-bottom: 8px;
+                font-size: 14px;
             }
         }
 

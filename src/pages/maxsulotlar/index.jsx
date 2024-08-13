@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Container } from "@containers";
 import { Typography, Row, Col, Button, Card, Modal } from "antd";
+import { Box } from "@mui/material";
 
 import "./style.scss";
 
@@ -23,13 +24,15 @@ const { Title, Paragraph } = Typography;
 const productData = [
   {
     title: "Smart Water",
-    description: "Suv sathi va uning sarfini onlayn monitoring qilish qurilmasi",
+    description:
+      "Suv sathi va uning sarfini onlayn monitoring qilish qurilmasi",
     image: Smartwater,
     link: "Batafsil",
   },
   {
     title: "Smart Well",
-    description: "Quduqlarda suv sho’rlanishini o'lchash va suv sathini hisoblash imkoniyatiga ega.",
+    description:
+      "Quduqlarda suv sho’rlanishini o'lchash va suv sathini hisoblash imkoniyatiga ega.",
     image: Smartwell,
     link: "Batafsil",
   },
@@ -47,7 +50,8 @@ const productData = [
   },
   {
     title: "Smart Channel",
-    description: "Smart channel - bu aqlli suv o’lchash qurilmasi bo’lib asosan kichik kanallardagi suv sarfini o’lchash uchun mo’ljallangan.",
+    description:
+      "Smart channel - bu aqlli suv o’lchash qurilmasi bo’lib asosan kichik kanallardagi suv sarfini o’lchash uchun mo’ljallangan.",
     image: Smartchannel,
     link: "Batafsil",
   },
@@ -72,25 +76,48 @@ function Index() {
 
   return (
     <>
-      <section id="gratis1">
+      <section
+        id="gratis1"
+        style={{
+          paddingBottom: 30,
+        }}
+      >
         <Container>
           <div className="custom-container">
-            <Title level={4} className="custom-section-title">
-              Mahsulotlar
-            </Title>
-            <Title
-              level={4}
-              style={{ fontSize: 28, fontWeight: 600, textAlign: "left", marginBottom: 15, color: "rgb(1, 154, 204)" }}
-              className="custom-section-subtitle"
+            <Box
+              sx={{
+                fontSize: 18,
+                fontWeight: "bold",
+              }}
+              component="h4"
             >
-              DISCOVER OUR EXPERTISE
-            </Title>
+              Bizning maxsulotlar
+            </Box>
+
+            <Box
+              sx={{
+                marginTop: 2,
+                fontSize: 24,
+                color: "rgb(1, 154, 204)",
+                width: 700,
+                marginBottom: 2,
+              }}
+              component="h5"
+            >
+              BIZNING KOMPANIYAMIZ BILAN YAQINDAN TANISHING HAMDA O'ZINGIZ UCHUN
+              FOYDALI MA'LUMOTLARNI OLING
+            </Box>
+
             <Row gutter={[16, 16]}>
               {productData.map((item, index) => (
                 <Col xs={24} sm={12} md={8} key={index}>
                   <Card hoverable className="custom-card">
                     <div className="card-cover">
-                      <img className="card-img" src={item.image} alt={`Feature ${index}`} />
+                      <img
+                        className="card-img"
+                        src={item.image}
+                        alt={`Feature ${index}`}
+                      />
                       <div className="card-title">
                         <Title level={4} className="card-title-text">
                           {item.title}
@@ -98,10 +125,12 @@ function Index() {
                       </div>
                     </div>
                     <div className="card-hover-content">
-                      <Paragraph className="card-description">{item.description}</Paragraph>
-                      <Button className="card-button" onClick={() => showModal(item)}>
+                      <Paragraph className="card-description">
+                        {item.description}
+                      </Paragraph>
+                      <a href="/maxsulotlar/info" className="card-button">
                         {item.link}
-                      </Button>
+                      </a>
                     </div>
                   </Card>
                 </Col>
@@ -110,33 +139,6 @@ function Index() {
           </div>
         </Container>
       </section>
-
-      <Modal
-        title={null}
-        visible={isModalVisible}
-        onOk={handleOk}
-        onCancel={handleCancel}
-        width="100%"
-        style={{ top: 30 }}
-        bodyStyle={{ height: '90vh', padding: 0 }}
-        footer={null}
-      >
-        <div className="modal-content">
-          <div className="modal-images">
-            {[...Array(2)].map((_, index) => (
-              <img key={index} className="modal-img" src={modalData.image} alt={modalData.title} />
-            ))}
-          </div>
-          <div className="modal-description">
-            <Title level={3}>{modalData.title}</Title>
-            <Paragraph>
-              {modalData.description}
-              {" "}Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-            </Paragraph>
-            <Button type="primary" onClick={handleOk}>Close</Button>
-          </div>
-        </div>
-      </Modal>
     </>
   );
 }
