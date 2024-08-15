@@ -6,7 +6,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { styled } from "@mui/system";
 import CarouselComponent from "../hamkorlar";
 import Contact from "../aloqa";
-
+import { Link } from 'react-router-dom';
 //style
 import "./style.scss";
 
@@ -149,21 +149,21 @@ const items = [
     description:
       "«Smart Solutions System» aqlli texnologiyalarni joriy qilishda O'zbekistondagi yetakchi kompaniyalardan biri hisoblanadi. Suv inshootlari, nasos stansiyalari, gidro uzellar va suv omborlarini avtomatlashtirish va monitoring qilish kompaniyaning asosiy yo’nalishlaridan biri.",
     title: "Innovatsiya, sifat va ishonchlilik kelajakni belgilaydi!",
-    buttonText: "More Read",
+    buttonText: "Batafsil ",
   },
   {
     bgImage: MainSection2,
     description:
       "«Smart Solutions System» aqlli texnologiyalarni joriy qilishda O'zbekistondagi yetakchi kompaniyalardan biri hisoblanadi. Suv inshootlari, nasos stansiyalari, gidro uzellar va suv omborlarini avtomatlashtirish va monitoring qilish kompaniyaning asosiy yo’nalishlaridan biri.",
     title: "Innovatsiya, sifat va ishonchlilik kelajakni belgilaydi!",
-    buttonText: "Sale Now",
+    buttonText: "Hozir Sotish",
   },
   {
     bgImage: MainSection3,
     description:
       "«Smart Solutions System» aqlli texnologiyalarni joriy qilishda O'zbekistondagi yetakchi kompaniyalardan biri hisoblanadi. Suv inshootlari, nasos stansiyalari, gidro uzellar va suv omborlarini avtomatlashtirish va monitoring qilish kompaniyaning asosiy yo’nalishlaridan biri.",
     title: "Innovatsiya, sifat va ishonchlilik kelajakni belgilaydi!",
-    buttonText: "Contact Me",
+    buttonText: "Biz bilan bog'laning",
   },
 ];
 
@@ -611,9 +611,11 @@ function Index() {
                     <Paragraph className="card-description">
                       {item.description}
                     </Paragraph>
-                    {/* <Button type="primary" className="card-button" style={{ backgroundColor: "#1a8ebc99", color: " #fff" }}>
-                    {item.link}
-                  </Button> */}
+                    <Paragraph  className="card-button" style={{ color: " #fff" }}>
+                    <Link to="/maxsulotlar">
+                        {item.link}
+                      </Link>
+                  </Paragraph>
                   </div>
                 </Card>
               </Col>

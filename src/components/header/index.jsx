@@ -71,10 +71,7 @@ const dataNavbar = [
     link: "/yangiliklar",
   },
 
-  {
-    title: "Aloqa",
-    link: "/aloqa",
-  },
+  
 ];
 
 function Header() {
@@ -130,6 +127,7 @@ function Header() {
           paddingTop: "3px",
         }}
       >
+        
         <Box
           sx={{
             display: "flex",
@@ -172,7 +170,7 @@ function Header() {
               color: "red",
               marginLeft: "15px",
             }}
-            href="/"
+            href="https://youtube.com/@sss_uz"
           >
             <YouTubeIcon />
           </a>
@@ -183,7 +181,7 @@ function Header() {
               color: "#E1306C",
               marginLeft: "15px",
             }}
-            href="/"
+            href="https://www.instagram.com/smartsolutionssystem.uz"
           >
             <InstagramIcon />
           </a>
@@ -194,7 +192,7 @@ function Header() {
               color: "#316FF6",
               marginLeft: "15px",
             }}
-            href="/"
+            href="https://www.facebook.com/share/mt1fH3mLM2ZYbgpf/?mibextid=LQQJ4d"
           >
             <FacebookOutlinedIcon />
           </a>
@@ -205,7 +203,7 @@ function Header() {
               color: "#25D366",
               marginLeft: "15px",
             }}
-            href="/"
+            href="wa.me/998977734818"
           >
             <WhatsAppIcon />
           </a>
@@ -216,7 +214,7 @@ function Header() {
               color: "#24A1DE",
               marginLeft: "15px",
             }}
-            href="/"
+            href="https://t.me/smartsolutions_system"
           >
             <TelegramIcon />
           </a>
@@ -347,7 +345,7 @@ function Header() {
               fontWeight: "bold",
               borderRadius: "2px",
             }}
-            href="/contact"
+            href="/aloqa"
           >
             Bog'lanish
           </a>

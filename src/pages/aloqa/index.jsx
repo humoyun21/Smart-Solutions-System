@@ -118,15 +118,29 @@ const Index = () => (
       </div>
       <div className="info-block">
         <MailOutlined className="icon" />
-        <p>sales@smarteyeapps.com</p>
-        <p>support@smarteyeapps.com</p>
+        <p>sss.ird@mail.ru</p>
+     
       </div>
       <div className="info-block">
         <PhoneOutlined className="icon" />
-        <p>+912 344 43434 443</p>
-        <p>+041 3434 4343 43</p>
+        <p
+  onClick={() => {
+    const confirmCall = window.confirm("Telefon qilishni xohlaysizmi?");
+    if (confirmCall) {
+      window.location.href = "tel:+998555060064";
+    }
+  }}
+  style={{ cursor: "pointer" }}
+>
+  +998 55 506-00-64
+</p>
+        
       </div>
     </div>
+
+
+
+    
     <Row gutter={[16, 16]} style={{ marginTop: "16px" }}>
       <Col xs={24} md={12}>
         <Card className="contact-form">
