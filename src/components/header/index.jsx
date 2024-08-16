@@ -75,6 +75,7 @@ const dataNavbar = [
 ];
 
 function Header() {
+  const [selectedLanguage, setSelectedLanguage] = useState("Uzbek");
   const [open, setOpen] = useState(false);
   const anchorRef = useRef(null);
 
@@ -107,6 +108,27 @@ function Header() {
 
     prevOpen.current = open;
   }, [open]);
+
+
+  ////flag
+
+  const handleLanguageChange = (language) => {
+    setSelectedLanguage(language);
+    setOpen(false);
+  };
+
+  const getFlagUrl = (language) => {
+    switch (language) {
+      case "Uzbek":
+        return "https://upload.wikimedia.org/wikipedia/commons/8/84/Flag_of_Uzbekistan.svg";
+      case "Rus":
+        return "https://upload.wikimedia.org/wikipedia/en/f/f3/Flag_of_Russia.svg";
+      case "English":
+        return "https://upload.wikimedia.org/wikipedia/en/a/a4/Flag_of_the_United_States.svg";
+      default:
+        return "https://upload.wikimedia.org/wikipedia/commons/8/84/Flag_of_Uzbekistan.svg";
+    }
+  };
 
   return (
     <AppBar 
@@ -277,58 +299,73 @@ function Header() {
           ))}
 
           <Stack direction="row" spacing={2}>
-            <div>
-              <Button
-                ref={anchorRef}
-                id="composition-button"
-                aria-controls={open ? "composition-menu" : undefined}
-                aria-expanded={open ? "true" : undefined}
-                aria-haspopup="true"
-                onClick={handleToggle}
-                sx={{
-                  marginX: 3,
-                  color: "#777",
-                }}
-                variant="outlined"
-              >
-                Tilni o'zgartirish
-              </Button>
-              <Popper
-                open={open}
-                anchorEl={anchorRef.current}
-                role={undefined}
-                placement="bottom-start"
-                transition
-                disablePortal
-              >
-                {({ TransitionProps, placement }) => (
-                  <Grow
-                    {...TransitionProps}
-                    style={{
-                      transformOrigin:
-                        placement === "bottom-start"
-                          ? "left top"
-                          : "left bottom",
-                    }}
-                  >
-                    <Paper>
-                      <ClickAwayListener onClickAway={handleClose}>
-                        <MenuList
-                          autoFocusItem={open}
-                          id="composition-menu"
-                          aria-labelledby="composition-button"
-                          onKeyDown={handleListKeyDown}
-                        >
-                          <MenuItem onClick={handleClose}>Uzbek</MenuItem>
-                          <MenuItem onClick={handleClose}>Rus</MenuItem>
-                          <MenuItem onClick={handleClose}>English</MenuItem>
-                        </MenuList>
-                      </ClickAwayListener>
-                    </Paper>
-                  </Grow>
-                )}
-              </Popper>
-            </div>
+
+
+          <div>
+      <Button
+        ref={anchorRef}
+        id="composition-button"
+        aria-controls={open ? "composition-menu" : undefined}
+        aria-expanded={open ? "true" : undefined}
+        aria-haspopup="true"
+        onClick={handleToggle}
+        sx={{
+          marginX: 3,
+          color: "#777",
+        }}
+        variant="outlined"
+        startIcon={
+          <img
+            src={getFlagUrl(selectedLanguage)}
+            alt={`${selectedLanguage} flag`}
+            style={{ width: "35px", height: "20px" }}
+          />
+        }
+      >
+       
+      </Button>
+      <Popper
+        open={open}
+        anchorEl={anchorRef.current}
+        role={undefined}
+        placement="bottom-start"
+        transition
+        disablePortal
+      >
+        {({ TransitionProps, placement }) => (
+          <Grow
+            {...TransitionProps}
+            style={{
+              transformOrigin:
+                placement === "bottom-start"
+                  ? "left top"
+                  : "left bottom",
+            }}
+          >
+            <Paper>
+              <ClickAwayListener onClickAway={handleClose}>
+                <MenuList
+                  autoFocusItem={open}
+                  id="composition-menu"
+                  aria-labelledby="composition-button"
+                  onKeyDown={handleListKeyDown}
+                >
+                  <MenuItem onClick={() => handleLanguageChange("Uzbek")}>
+                    Uzbek
+                  </MenuItem>
+                  <MenuItem onClick={() => handleLanguageChange("Rus")}>
+                    Rus
+                  </MenuItem>
+                  <MenuItem onClick={() => handleLanguageChange("English")}>
+                    English
+                  </MenuItem>
+                </MenuList>
+              </ClickAwayListener>
+            </Paper>
+          </Grow>
+        )}
+      </Popper>
+          </div>
           </Stack>
 
           <a
