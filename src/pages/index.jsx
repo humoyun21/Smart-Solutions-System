@@ -7,6 +7,7 @@ import Yangiliklar from "./yangiliklar";
 import Aloqa from "./aloqa";
 import Videolar from "./videolar";
 import ProductInfo from "./maxsulotlarInfo";
+import Map from "./map";
 
 export {
   Asosiy,
@@ -18,4 +19,5 @@ export {
   Aloqa,
   Videolar,
   ProductInfo,
+  Map,
 };

@@ -5,6 +5,7 @@ import { Paper, Box } from "@mui/material";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { styled } from "@mui/system";
 import CarouselComponent from "../hamkorlar";
+import Map from "../map"
 import Contact from "../aloqa";
 import { Link } from 'react-router-dom';
 //style
@@ -374,20 +375,22 @@ function Index() {
             }}
             component="h4"
           >
-            BIZ HAQIMIZDA QISQACHA MA'LUMOT
+            Biz haqimizda qisqacha ma'lumot
           </Box>
 
-          <Box
+                    <Box
             sx={{
               marginTop: 2,
               fontSize: 24,
               color: "rgb(1, 154, 204)",
+              textTransform: "none", // Matnni oddiy holatda ko'rsatadi
             }}
             component="h5"
           >
-            BIZNING KOMPANIYAMIZ BILAN YAQINDAN TANISHING HAMDA O'ZINGIZ UCHUN
-            FOYDALI MA'LUMOTLARNI OLING
+            Bizning kompaniyamiz bilan yaqindan tanishing hamda o'zingiz uchun
+            foydali ma'lumotlarni oling
           </Box>
+
 
           <Box
             sx={{
@@ -470,20 +473,21 @@ function Index() {
           Bizning xizmatlarimiz
         </Box>
 
-        <Box
-          component="h5"
-          sx={{
-            fontSize: 24,
-            marginLeft: 5,
-            marginBottom: 5,
-            textAlign: "left",
-            color: "rgb(1, 154, 204)",
-            textTransform: "uppercase",
-            width: 700,
-          }}
-        >
-          Bizning xizmatlar sifat va ishonch ustiga qurilgan
-        </Box>
+              <Box
+        component="h5"
+        sx={{
+          fontSize: 24,
+          marginLeft: 5,
+          marginBottom: 5,
+          textAlign: "left",
+          color: "rgb(1, 154, 204)",
+          textTransform: "none", // Matnni oddiy holatda ko'rsatadi
+          width: 700,
+        }}
+      >
+        Bizning xizmatlar sifat va ishonch ustiga qurilgan
+      </Box>
+
 
         <Box
           sx={{
@@ -575,20 +579,21 @@ function Index() {
         </Box>
 
         <Box
-          component="h5"
-          sx={{
-            fontSize: 24,
-            marginLeft: 5,
-            marginBottom: 5,
-            textAlign: "left",
-            color: "rgb(1, 154, 204)",
-            textTransform: "uppercase",
-            width: 700,
-          }}
-        >
-          Bizning maxsulotlarimiz bilan yaqindan tanishing va aniq ma'lumotga
-          ega bo'ling
-        </Box>
+  component="h5"
+  sx={{
+    fontSize: 24,
+    marginLeft: 5,
+    marginBottom: 5,
+    textAlign: "left",
+    color: "rgb(1, 154, 204)",
+    textTransform: "none", // Matnni oddiy holatda ko'rsatadi
+    width: 700,
+  }}
+>
+  Bizning mahsulotlarimiz bilan yaqindan tanishing va aniq ma'lumotga
+  ega bo'ling
+</Box>
+
 
         <div className="product-wrap">
           <Row gutter={[16, 26]}>
@@ -612,7 +617,7 @@ function Index() {
                       {item.description}
                     </Paragraph>
                     <Paragraph  className="card-button" style={{ color: " #fff" }}>
-                    <Link to="/maxsulotlar">
+                    <Link to="/maxsulotlar/info">
                         {item.link}
                       </Link>
                   </Paragraph>
@@ -646,19 +651,20 @@ function Index() {
         </Box>
 
         <Box
-          component="h5"
-          sx={{
-            fontSize: 24,
-            marginLeft: 5,
-            textAlign: "left",
-            color: "rgb(1, 154, 204)",
-            textTransform: "uppercase",
-            width: 700,
-          }}
-        >
-          Jamoamizdagi yangiliklar va haftalik yangiliklar tahlili bilan ushbu
-          bo'limda tanishishingiz mumkin
-        </Box>
+  component="h5"
+  sx={{
+    fontSize: 24,
+    marginLeft: 5,
+    textAlign: "left",
+    color: "rgb(1, 154, 204)",
+    textTransform: "none", // Matnni oddiy holatda ko'rsatadi
+    width: 700,
+  }}
+>
+  Jamoamizdagi yangiliklar va haftalik yangiliklar tahlili bilan ushbu
+  bo'limda tanishishingiz mumkin
+</Box>
+
         <div className="news-wrap">
           <div className="content-box">
             <div className="grid-container ">
@@ -717,20 +723,21 @@ function Index() {
             </Box>
 
             <Box
-              sx={{
-                marginTop: 2,
-                fontSize: 24,
-                color: "rgb(1, 154, 204)",
-                width: 700,
-                textTransform: "uppercase",
-                marginBottom: 2,
-                ml: 2,
-              }}
-              component="h5"
-            >
-              Xalqaro va yurtimiz yangiliklari, ish jarayonlari va haftalik
-              yangiliklarni bilan tanishishingiz mumkin
-            </Box>
+  sx={{
+    marginTop: 2,
+    fontSize: 24,
+    color: "rgb(1, 154, 204)",
+    width: 700,
+    textTransform: "none", // Matnni oddiy holatda ko'rsatadi
+    marginBottom: 2,
+    ml: 2,
+  }}
+  component="h5"
+>
+  Xalqaro va yurtimiz yangiliklari, ish jarayonlari va haftalik
+  yangiliklarni bilan tanishishingiz mumkin
+</Box>
+
           </div>
           <div id="app">
             <Swiper
@@ -791,6 +798,9 @@ function Index() {
         </div>
       </section>
 
+
+      {/* Map */}
+      <Map />
       {/* Contact */}
 
       <Contact />

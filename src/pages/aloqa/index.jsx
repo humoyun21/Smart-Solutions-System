@@ -97,20 +97,21 @@ const Index = () => (
     </Box>
 
     <Box
-      sx={{
-        marginTop: 2,
-        fontSize: 24,
-        color: "rgb(1, 154, 204)",
-        textTransform: "uppercase",
-        width: 700,
-        marginBottom: 2,
-        marginLeft: 2,
-      }}
-      component="h5"
-    >
-      Sizni qiziqtirgan barcha savollar va takliflar bilan murojat qilishingiz
-      mumkin
-    </Box>
+  sx={{
+    marginTop: 2,
+    fontSize: 24,
+    color: "rgb(1, 154, 204)",
+    width: 700,
+    marginBottom: 2,
+    marginLeft: 2,
+    // textTransform: "none", // Agar siz avval `textTransform` qiymatini belgilagan bo'lsangiz, uni olib tashlashingiz mumkin
+  }}
+  component="h5"
+>
+  Sizni qiziqtirgan barcha savollar va takliflar bilan murojat qilishingiz
+  mumkin
+</Box>
+
     <div className="contact-info">
       <div className="info-block">
         <EnvironmentOutlined className="icon" />

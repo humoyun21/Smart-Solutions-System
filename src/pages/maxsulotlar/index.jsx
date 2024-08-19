@@ -95,18 +95,20 @@ function Index() {
             </Box>
 
             <Box
-              sx={{
-                marginTop: 2,
-                fontSize: 24,
-                color: "rgb(1, 154, 204)",
-                width: 700,
-                marginBottom: 2,
-              }}
-              component="h5"
-            >
-              BIZNING KOMPANIYAMIZ BILAN YAQINDAN TANISHING HAMDA O'ZINGIZ UCHUN
-              FOYDALI MA'LUMOTLARNI OLING
-            </Box>
+  sx={{
+    marginTop: 2,
+    fontSize: 24,
+    color: "rgb(1, 154, 204)",
+    width: 700,
+    marginBottom: 2,
+    textTransform: "none", // Matnni oddiy holatda ko'rsatadi
+  }}
+  component="h5"
+>
+  Bizning kompaniyamiz bilan yaqindan tanishing hamda o'zingiz uchun
+  foydali ma'lumotlarni oling
+</Box>
+
 
             <Row gutter={[16, 16]}>
               {productData.map((item, index) => (

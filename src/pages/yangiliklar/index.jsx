@@ -107,18 +107,20 @@ function NewsSection() {
       </Box>
 
       <Box
-        sx={{
-          marginTop: 2,
-          fontSize: 24,
-          color: "rgb(1, 154, 204)",
-          paddingBottom: 2,
-          width: 700,
-        }}
-        component="h5"
-      >
-        AMOAMIZDAGI YANGILIKLAR VA HAFTALIK YANGILIKLAR TAHLILI BILAN USHBU
-        BO'LIMDA TANISHISHINGIZ MUMKIN
-      </Box>
+  sx={{
+    marginTop: 2,
+    fontSize: 24,
+    color: "rgb(1, 154, 204)",
+    paddingBottom: 2,
+    width: 700,
+    textTransform: "none", // Matnni oddiy holatda ko'rsatadi
+  }}
+  component="h5"
+>
+  Jamoamizdagi yangiliklar va haftalik yangiliklar tahlili bilan ushbu
+  bo'limda tanishishingiz mumkin
+</Box>
+
 
       <Box
         sx={{
