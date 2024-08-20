@@ -3,6 +3,7 @@ import "./style.scss";
 import { Grid, Paper, Typography, Box } from "@mui/material";
 import { styled } from "@mui/material/styles";
 import { Button } from '@mui/material';
+import { Link } from "react-router-dom";
 // Images
 import Yangiliklardayjesti from "../../assets/images/yangiliklardayjesti.png";
 import Xorazm from "../../assets/images/xorazm.png";
@@ -16,7 +17,7 @@ const newsData = [
     description:
       "Qozogʻiston Xitoy korporatsiyalari bilan suv resurslarini boshqarish boʻyicha hamkorlik masalalarini koʻrib chiqmoqda...",
     image: Yangiliklardayjesti,
-    link: "Batafsil",
+    link: "Batafsil" ,
     xs: 6,
     md: 6,
   },
@@ -132,6 +133,7 @@ function NewsSection() {
           flexWrap: "wrap",
         }}
       >
+         <Link to="/yangliklar/info" style={{ textDecoration: "none"  , }}>
         <Paper
           sx={{
             width: 500,
@@ -176,7 +178,7 @@ function NewsSection() {
           >
             {newsData[0].description}
           </Typography>
-          <Button
+          {/* <Button
       href="/yangliklar/info"
       variant="contained"  // This gives the button a filled appearance
       color="primary"      // This uses the MUI primary color, which is blue by default
@@ -193,9 +195,11 @@ function NewsSection() {
       className="card-button-info"
     >
       {newsData.link}
-          </Button>
+          </Button> */}
         </Paper>
+        </Link>
 
+        <Link to="/yangliklar/info" style={{ textDecoration: "none"  , }}>
         <Paper
           sx={{
             width: 250,
@@ -238,7 +242,7 @@ function NewsSection() {
             {newsData[2].description}
           
           </Typography>
-          <Button
+          {/* <Button
       href="/yangliklar/info"
       variant="contained"  // This gives the button a filled appearance
       color="primary"      // This uses the MUI primary color, which is blue by default
@@ -255,10 +259,12 @@ function NewsSection() {
       className="card-button-info"
     >
       {newsData.link}
-          </Button>
+          </Button> */}
         </Paper>
+        </Link>
 
         <Box>
+         <Link to="/yangliklar/info" style={{ textDecoration: "none"  , }}>
           <Paper
             sx={{
               width: 600,
@@ -307,7 +313,7 @@ function NewsSection() {
                 {newsData[2].description}
                 
               </Typography>
-              <Button
+              {/* <Button
       href="/yangliklar/info"
       variant="contained"  // This gives the button a filled appearance
       color="primary"      // This uses the MUI primary color, which is blue by default
@@ -324,10 +330,12 @@ function NewsSection() {
       className="card-button-info"
     >
       {newsData.link}
-          </Button>
+          </Button> */}
             </Box>
           </Paper>
+          </Link>
 
+          <Link to="/yangliklar/info" style={{ textDecoration: "none"  , }}>
           <Paper
             sx={{
               width: 600,
@@ -375,7 +383,7 @@ function NewsSection() {
               >
                 {newsData[2].description}
               </Typography>
-              <Button
+              {/* <Button
       href="/yangliklar/info"
       variant="contained"  // This gives the button a filled appearance
        // This uses the MUI primary color, which is blue by default
@@ -389,10 +397,10 @@ function NewsSection() {
       className="card-button-info"
     >
       {newsData.link}
-          </Button>
+          </Button> */}
             </Box>
           </Paper>
-      
+          </Link>
         </Box>
 
       </Box>
@@ -408,6 +416,7 @@ function NewsSection() {
           Asosiy yangiliklar
         </Typography>
       </Box>
+
 
       <Box
         sx={{
@@ -456,11 +465,26 @@ function NewsSection() {
                   >
                     {item.description}
                   </Typography>
+                  <Link to="/yangliklar/info" style={{ textDecoration: "none"  , }}>
+                  <Typography
+                 
+                    sx={{
+                      fontSize: 16,
+                     
+                      color: "rgb(1, 154, 204)",
+                      marginTop: 1,
+                    }}
+                    component="h4"
+                  >
+                    {item.link}
+                  </Typography>
+                  </Link>
                 </Item>
               </Grid>
             );
           })}
         </Grid>
+
       </Box>
 
     </section>
