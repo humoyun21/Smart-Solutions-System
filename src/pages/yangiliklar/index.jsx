@@ -2,7 +2,7 @@ import React from "react";
 import "./style.scss";
 import { Grid, Paper, Typography, Box } from "@mui/material";
 import { styled } from "@mui/material/styles";
-
+import { Button } from '@mui/material';
 // Images
 import Yangiliklardayjesti from "../../assets/images/yangiliklardayjesti.png";
 import Xorazm from "../../assets/images/xorazm.png";
@@ -119,7 +119,7 @@ function NewsSection() {
 >
   Jamoamizdagi yangiliklar va haftalik yangiliklar tahlili bilan ushbu
   bo'limda tanishishingiz mumkin
-</Box>
+      </Box>
 
 
       <Box
@@ -147,8 +147,10 @@ function NewsSection() {
               marginBottom: 2,
             }}
             src={newsData[0].image}
+            
             alt="News photos"
           />
+         
 
           <Typography
             component="h4"
@@ -161,6 +163,7 @@ function NewsSection() {
           >
             {newsData[0].title}
           </Typography>
+         
 
           <Typography
             component="p"
@@ -168,9 +171,29 @@ function NewsSection() {
               marginTop: 2,
               fontSize: 15,
             }}
+            
+
           >
             {newsData[0].description}
           </Typography>
+          <Button
+      href="/yangliklar/info"
+      variant="contained"  // This gives the button a filled appearance
+      color="primary"      // This uses the MUI primary color, which is blue by default
+      sx={{
+        textTransform: 'none',     // Keeps the text case as provided
+        fontWeight: 'bold',        // Makes the button text bold
+        padding: '8px 16px',       // Adds padding for better appearance
+        borderRadius: '8px', 
+        color: "white"  ,    // Rounds the corners of the button
+        '&:hover': {
+          backgroundColor: '#1565c0',  // Custom darker blue on hover
+        },
+      }}
+      className="card-button-info"
+    >
+      {newsData.link}
+          </Button>
         </Paper>
 
         <Paper
@@ -213,7 +236,26 @@ function NewsSection() {
             {newsData[1].description}
             <br />
             {newsData[2].description}
+          
           </Typography>
+          <Button
+      href="/yangliklar/info"
+      variant="contained"  // This gives the button a filled appearance
+      color="primary"      // This uses the MUI primary color, which is blue by default
+      sx={{
+        textTransform: 'none',     // Keeps the text case as provided
+        fontWeight: 'bold',        // Makes the button text bold
+        padding: '8px 16px',       // Adds padding for better appearance
+        borderRadius: '8px', 
+        color: "white"  ,    // Rounds the corners of the button
+        '&:hover': {
+          backgroundColor: '#1565c0',  // Custom darker blue on hover
+        },
+      }}
+      className="card-button-info"
+    >
+      {newsData.link}
+          </Button>
         </Paper>
 
         <Box>
@@ -229,6 +271,7 @@ function NewsSection() {
             elevation={4}
           >
             <img
+            
               style={{
                 width: 300,
               }}
@@ -262,7 +305,26 @@ function NewsSection() {
                 }}
               >
                 {newsData[2].description}
+                
               </Typography>
+              <Button
+      href="/yangliklar/info"
+      variant="contained"  // This gives the button a filled appearance
+      color="primary"      // This uses the MUI primary color, which is blue by default
+      sx={{
+        textTransform: 'none',     // Keeps the text case as provided
+        fontWeight: 'bold',        // Makes the button text bold
+        padding: '8px 16px',       // Adds padding for better appearance
+        borderRadius: '8px', 
+        color: "white"  ,    // Rounds the corners of the button
+        '&:hover': {
+          backgroundColor: '#1565c0',  // Custom darker blue on hover
+        },
+      }}
+      className="card-button-info"
+    >
+      {newsData.link}
+          </Button>
             </Box>
           </Paper>
 
@@ -313,10 +375,28 @@ function NewsSection() {
               >
                 {newsData[2].description}
               </Typography>
+              <Button
+      href="/yangliklar/info"
+      variant="contained"  // This gives the button a filled appearance
+       // This uses the MUI primary color, which is blue by default
+      sx={{
+        textTransform: 'none',
+        fontWeight: 'bold',
+        padding: '8px 16px',
+        borderRadius: '8px',
+        color: 'black ',  // Yozuv rangini qora qilish
+      }}
+      className="card-button-info"
+    >
+      {newsData.link}
+          </Button>
             </Box>
           </Paper>
+      
         </Box>
+
       </Box>
+
       <Box>
         <Typography
           sx={{
@@ -382,6 +462,7 @@ function NewsSection() {
           })}
         </Grid>
       </Box>
+
     </section>
   );
 }
