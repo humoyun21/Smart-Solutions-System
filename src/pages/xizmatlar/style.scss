@@ -1,67 +1,4 @@
-.intro {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 20px;
-    padding-bottom: 40px;
-  background-color: #eeecec;
-    .intro-text {
-        padding-left: 30px;
-      width: 50%;
-      padding-right: 20px;
-  
-      h2 {
-        padding-left: 0px;
-        font-weight: bold;
-        color: #019acc;
-        font-size: 25px;
-        margin-bottom: 10px;
-      }
-  
-      p {
-        width: 600px;
-        font-weight:bold;
-        font-size: 20px;
-        line-height: 1.5;
-        color: #3e3d3d;
-      }
-     
-      button {
-        margin-top: 20px;
-        background-color: #eeecec; /* White background for a clean look */
-        color: #007bff; /* Text color */
-        border: 2px solid #007bff; /* Colorful border */
-        border-radius: 5px; /* Rounded corners */
-        padding: 5px 20px; /* Padding for button size */
-        font-size: 16px; /* Text size */
-        cursor: pointer; /* Pointer cursor on hover */
-        transition: background-color 0.3s, color 0.3s, border-color 0.3s, transform 0.3s; /* Smooth transitions for effects */
-      
-        &:hover {
-          
-          color: #22aaff; /* Text color on hover */
-          border-color: #0056b3; /* Darker border color on hover */
-          transform: scale(1.05); /* Slightly scale up the button on hover */
-        }
-      
-        &:focus {
-          outline: none; /* Remove default focus outline */
-        }
-      }
-      
-    }
-  
-    .intro-image {
-      width: 50%;
-      text-align: right;
-  
-      img {
-        max-width: 100%;
-        height: auto;
-        border-radius: 10px;
-      }
-    }
-  }
+
   
   /* Responsive adjustments */
   @media (max-width: 768px) {
@@ -83,60 +20,7 @@
   }
   
 
-.service{
-    background-color: #e6f0f4;
-    padding-top: 40px;
-    padding-bottom: 40px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 30px;
-    margin-bottom: 0px;
 
-    &-title{
-        
-        display: block;
-        p{
-            
-            font-size: 20px;
-            margin-top: 110px;
-            padding-top: 40px;
-            padding-bottom: 20px;
-            color: rgb(1, 154, 204);
-            font-weight:inherit;
-            
-        }
-        img{
-          border-radius: 5px;
-            width: 300px;
-            height: 400px;
-            // margin-top: 00px;
-        }
-       
-    }
-
-    &-description{
-
-        display: flex;
-        img{
-          border-radius: 5px;
-            width: 400px;
-            height: 600px;
-        }
-        h2{
-            color:rgb(45, 45, 45);
-            width: 450px;
-        }
-        h3{    color: rgb(1, 154, 204);
-            font-weight:inherit;
-            margin-top: 40px;
-            font-size: 20px;
-            padding-top: 40px;
-            padding-left: 40px;
-        }
-    }
-
-}
 .about {
 background-color: #ffffff;
   margin: 0 auto;

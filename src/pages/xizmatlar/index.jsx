@@ -1,5 +1,9 @@
 import React, { useState } from "react";
 import "./style.scss";
+
+import { Card, CardContent, CardMedia,Grid, Typography, Button, Box } from '@mui/material';
+import { styled } from '@mui/system';
+
 import suvombor from "../../assets/images/suvombor.png";
 
 import suvombor1 from "../../assets/images/suvombor.png";
@@ -9,6 +13,74 @@ import standart from "../../assets/images/standart.jpg";
 import quyoshpanellari from "../../assets/images/quyoshpanellari.jpeg";
 import suvolchash from "../../assets/images/suvolchash.jpg";
 
+
+const StyledCard = styled(Card)({
+  display: 'flex',
+  alignItems: 'center',
+  justifyContent: 'space-between',
+  padding: '20px',
+  paddingBottom: '40px',
+  backgroundColor: '#eeecec',
+  marginBottom: '20px', // Space between cards
+});
+
+const IntroText = styled(CardContent)({
+  paddingLeft: '30px',
+  width: '50%',
+  paddingRight: '20px',
+});
+
+const IntroTitle = styled(Typography)({
+  fontWeight: 'bold',
+  color: '#019acc',
+  fontSize: '25px',
+  marginBottom: '10px',
+});
+
+const IntroParagraph = styled(Typography)({
+  width: '600px',
+  fontWeight: 'bold',
+  fontSize: '20px',
+  lineHeight: '1.5',
+  color: '#3e3d3d',
+});
+
+const IntroImage = styled(CardMedia)({
+  width: '50%',
+  textAlign: 'right',
+  
+  img: {
+    maxWidth: '100%',
+    height: 'auto',
+    borderRadius: '10px',
+  },
+});
+
+
+
+/////
+const CustomCard = styled(Card)({
+  backgroundColor: '#e6f0f4',
+  borderRadius: '10px',
+  boxShadow: 'none',
+  margin: '0 auto',
+});
+const SmallCardMedia = styled(CardMedia)({
+  borderRadius: '10px',
+  height: 300,
+});
+
+const LargeCardMedia = styled(CardMedia)({
+  borderRadius: '10px',
+  width: '100%',
+  height: 'auto',
+});
+const ServiceTitle = styled(Typography)({
+  color: 'rgb(1, 154, 204)',
+  fontSize: '20px',
+  fontWeight: '500',
+  marginBottom: '20px',
+});
 
 function Index() {
   const content = {
@@ -74,36 +146,88 @@ function Index() {
   
   return (
     <>
-     <div className="intro">
-  <div className="intro-text">
-    <h2>Introduction Title</h2>
-    <p>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam tempore laudantium ab optio vitae numquam, odit quas. Nam, nemo numquam!
-    </p>
-
-    <button>
-      Read more
-    </button>
-  </div>
-  <div className="intro-image">
-    <img src={suvombor} alt="Introduction Image" />
-  </div>
-      </div>
-
-      <div className="service">
-        <div className="service-title">
-          <p>{selectedCard.title || content.title}</p>
-          <img src={selectedCard.imgSrc || suvombor} alt="" />
-        </div>
-
-        <div className="service-description">
-          <img src={selectedCard.imgSrc || suvombor} alt="" />
-          <div>
-            <h3>{selectedCard.title || content.title}</h3>
-            <h2>{selectedCard.description || content.description}</h2>
-          </div>
-        </div>
-      </div>
+   <StyledCard>
+      <IntroText>
+        <IntroTitle variant="h2">Introduction Title</IntroTitle>
+        <IntroParagraph>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam tempore laudantium ab optio vitae numquam, odit quas. Nam, nemo numquam!
+        </IntroParagraph>
+        <Button
+          variant="outlined"
+          sx={{
+            marginTop: '20px',
+            backgroundColor: '#eeecec',
+            color: '#007bff',
+            borderColor: '#007bff',
+            borderRadius: '5px',
+            padding: '5px 20px',
+            fontSize: '16px',
+            cursor: 'pointer',
+            transition: 'background-color 0.3s, color 0.3s, border-color 0.3s, transform 0.3s',
+            '&:hover': {
+              color: '#22aaff',
+              borderColor: '#0056b3',
+              transform: 'scale(1.05)',
+            },
+            '&:focus': {
+              outline: 'none',
+            },
+          }}
+        >
+          Read more
+        </Button>
+      </IntroText>
+      <IntroImage
+        component="img"
+        image={suvombor}
+        alt="Introduction Image"
+      />
+    </StyledCard>
+    <Box sx={{ backgroundColor: '#e6f0f4', padding: '40px' }}>
+      <Grid container spacing={4} justifyContent="center">
+        <Grid item xs={12} sm={6} md={4}>
+        <CustomCard>
+      <CardContent sx={{ textAlign: 'center' }}>
+        <ServiceTitle variant="body1">To'liq xizmatlar to'plami</ServiceTitle>
+        <SmallCardMedia
+          component="img"
+          image={suvombor1} // Kichik rasm manzilini o'rnating
+          alt="Service Image"
+        />
+        <Typography
+          variant="body2"
+          sx={{
+            color: 'rgb(45, 45, 45)',
+            fontSize: '16px',
+            lineHeight: '1.5',
+            marginTop: '20px',
+          }}
+        >
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Excepturi, quod nam modi corporis nemo quam autem? Magnam corrupti mollitia optio eaque laudantium repellat molestiae quae? Debitis explicabo dignissimos sint vero reprehenderit praesentium architecto, repudiandae ullam nobis. Error animi nam enim autem deleniti, ex, aliquid adipisci perferendis quia sapiente officiis nisi quibusdam at ipsam quis dolor odio maxime eaque. Inventore voluptatibus tempora veritatis fugit facilis itaque eligendi, reprehenderit culpa doloremque rem.
+        </Typography>
+      </CardContent>
+    </CustomCard>
+        </Grid>
+        <Grid item xs={12} sm={6} md={8}>
+          <CustomCard>
+            <CardContent sx={{ display: 'flex', alignItems: 'center' }}>
+              <LargeCardMedia
+                component="img"
+                image={avtomat} // Katta rasm manzilini o'rnating
+                alt="Service Image"
+                sx={{ width: '50%'  , height: '600px'}}
+              />
+              <Box sx={{ marginLeft: '20px', width: '50%' }}>
+                <ServiceTitle variant="body1">To'liq xizmatlar to'plami</ServiceTitle>
+                <Typography variant="body2" sx={{ color: 'rgb(45, 45, 45)', fontSize: '16px', lineHeight: '1.5' }}>
+                  Lorem ipsum dolor sit amet consectetur adipisi voluptatum perferendis. Deleniti obcaecati autem maxime veritatis quae accusamus, aspernatur tenetur amet consectetur, iste ut necessitatibus dolorum ratione cum rerum vel,<br></br> nisi sapiente ex similique sint tempore accusantium. Asperiores, sit quo. Eius architecto aliquid, necessitatibus ab, animi modi quasi harum in ad distinctio amet. Voluptatibus quo velit cum culpa earum? Officia laborum officiis ipsa fugit cupiditate explicabo velit quaerat porro, quae possimus, facilis ullam ducimus facere vel cumque, exercitationem ipsam itaque recusandae? Voluptatem ex hic molestiae obcaecati nobis illo magnam. Ipsum repellat facere modi excepturi, reprehenderit corporis? Amet nobis eum veritatis dolor consequatur aspernatur harum rerum eius voluptates eaque, distinctio excepturi deserunt quis, aut, reprehenderit ut! Laboriosam ullam excepturi nsequatur in impedit odit ex earum. Vel atque voluptate soluta illum odit nesciunt laudantium praesentium quasi maxime numquam aliquid, odio corrupti. Atque, vero!<br></br><br></br> Tempora, nesciunt! Dicta voluptas modi, error facere quaerat magni esse corporis.
+                </Typography>
+              </Box>
+            </CardContent>
+          </CustomCard>
+        </Grid>
+      </Grid>
+    </Box>
 
       <div className="about">
   <div className="container">
@@ -152,7 +276,7 @@ function Index() {
       
     </div>
   </div>
-</div>
+      </div>
 
       
       
